@@ -8,6 +8,24 @@
   }
 }
 
+@layer components{
+  .josefin{
+    --font-josefin: var(--font-josefin);
+  }
+  .lato{
+    --font-lato: var(--font-lato);
+  }
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--font-josefin);
+  font-size:xx-large;
+}
+
+p{
+  font-family: var(--font-lato);
+}
+
 @layer base {
   :root {
     --text-50: #e7f4fe;
@@ -136,6 +154,7 @@
 }
 
 
+
 .background--custom {
         background-color: #F5F5F5;
         width: 100vw;
@@ -150,7 +169,7 @@
 
 
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -158,6 +177,6 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 

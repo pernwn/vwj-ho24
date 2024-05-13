@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
-import FilledBtn from "../ui/buttons";
+import { FilledBtn, OutlinedBtn } from "../ui/Buttons";
 
 export const Hero = () => {
   return (
@@ -10,8 +10,9 @@ export const Hero = () => {
     >
       <section>
         <Nav />
-              <h1>Hello</h1>
-              <FilledBtn title="KNAP"/>
+              <h1 className="font-header">Hello</h1>
+        <FilledBtn title="KNAP" />
+        <OutlinedBtn title="KNAP 2"/>
 
       </section>
     </section>
