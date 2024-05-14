@@ -1,5 +1,7 @@
 
 import { Hero } from "./components/Hero"
+import Intro from "./components/Intro";
+import USP from "./ui/usp";
 
 
 
@@ -8,6 +10,8 @@ const page = () => {
   return (
     <main>
       <Hero />
+      <USP />
+      <Intro/>
     </main>
   );
 }

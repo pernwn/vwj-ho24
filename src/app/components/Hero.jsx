@@ -8,7 +8,7 @@ import Header from "./Header";
 
 export const Hero = () => {
   return (
-    <section className={`bg-no-repeat bg-center bg-heroimg h-full bg-cover`}>
+    <section className={`bg-no-repeat bg-center bg-heroimg h-full bg-contain`}>
       <div
         className={`${styles.padding} h-full w-full bg-cmdark/60 bg-clip-padding backdrop-filter backdrop-blur-md`}
       >
@@ -21,6 +21,7 @@ export const Hero = () => {
             CyberMinds er et IT-sikkerheds freelancehus, hvor vi stiller
             Danmarks bedste IT-sikkerhedseksperter til rådighed for dig.
           </h2>
+          <FilledBtn title="Kontakt"/>
         </div>
 
         {/* <div>
