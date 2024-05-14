@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@material-tailwind/react";
+import { Button, IconButton } from "@material-tailwind/react";
 import React from "react";
 
 export const FilledBtn = (props) => {
@@ -20,13 +20,26 @@ export const OutlinedBtn = (props) => {
 
   return (
     <a href={url}>
-      <Button className="flex items-center text-base hover:text-lg hover:-translate-y-1 active:translate-y-0 gap-4 cursor-pointer py-2 px-6 my-4 mx-0 text-cmprimary font-normal tracking-normal hover:font-medium hover:tracking-wider bg-text rounded-xl border-solid border-cmprimary border-2 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 hover:bg-cmprimary hover:bg-opacity-40 hover:text-cmwhite transition-all ease-in-out duration-300">
-        {title} {icon}
+      <Button className="flex items-center text-base hover:-translate-y-1  active:translate-y-0 gap-4 cursor-pointer py-2 px-6 my-4 mx-0 text-cmprimary font-normal tracking-normal hover:font-medium bg-cmaccent rounded-xl border-solid border-cmaccent border-2 bg-clip-padding backdrop-filter backdrop-blur-sm hover:bg-cmprimary hover:bg-opacity-40 hover:text-cmwhite transition-all ease-in-out duration-300">
+        {title}
+        {icon}
       </Button>
     </a>
   );
 };
 
+
+// TODO lav props til funktion som ikonknap gør
+export const IconBtn = (props) => {
+  const { icon } = props;
+  return (
+    <a href="#">
+      <IconButton className="w-fit flex items-center hover:-translate-y-1 active:translate-y-0 gap-4 cursor-pointer py-2 px-6 my-4 mx-0 rounded-xl border-solid border-cmprimary border-2 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 hover:bg-cmprimary hover:bg-opacity-40 transition-all ease-in-out duration-300">
+        {icon}
+      </IconButton>
+    </a>
+  );
+}
 
 // eslint-disable-next-line import/no-anonymous-default-export
 

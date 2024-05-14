@@ -2,7 +2,7 @@ import React from 'react'
 
 const FaqFooter = () => {
   return (
-    <p className='font-josefin'>faqFooter</p>
+    <h1>faqFooter</h1>
   )
 }
 

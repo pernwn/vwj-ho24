@@ -1,6 +1,6 @@
 
 import FaqFooter from "./components/faqFooter";
-import Header from "./components/header";
+import styles from "./style";
 
 import "./globals.css";
 
@@ -23,7 +23,7 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: "CyberMinds Revised",
+  title: "VWJ CyberMinds Revised",
   description: "Victoria W Johansen - Multimediedesign, Hovedopgave 2024",
 };
 
@@ -31,11 +31,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-cmwhite">
       <body
-       className={`${josefin_Sans.variable} ${lato.variable}`}
+        className={`${josefin_Sans.variable} mx-auto max-w-[1920px] overflow-x-hidden ${lato.variable} mx-auto max-w-[1920px] overflow-x-hidden`}
       >
-        <Header />
         <main className="flex-grow h-screen">{children}</main>
-        <FaqFooter/>
+        <FaqFooter />
       </body>
     </html>
   );

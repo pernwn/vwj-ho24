@@ -82,16 +82,15 @@ module.exports = {
         950: "var(--accent-950)",
       },
     },
+    // fontFamily: {
+    //   josefinSans: ["Josefin Sans", "sans-serif"],
+    //   lato: ["Lato", "sans-serif"]
+    // },
 
     extend: {
       backgroundImage: {
-        heroimg: "url('/public/Backgrounds/heroBG.jpeg')",
-
-        // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        // "gradient-conic":
-        //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "heroimg": "url('/heroimg.jpeg')",
       },
-
 
       fontSize: {
         sm: "0.750rem",
@@ -100,13 +99,10 @@ module.exports = {
         "2xl": "1.777rem",
         "3xl": "2.369rem",
         "4xl": "3.158rem",
-        "5xl": "4.210rem",
+        "5xl": "4.210rem", 
       },
 
-      fontWeight: {
-        normal: "400",
-        bold: "700",
-      },
+
     },
     screens: {
       xs: "480px",
