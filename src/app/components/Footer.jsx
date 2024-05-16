@@ -1,5 +1,5 @@
 import React from 'react'
-import FaqAccordion from '../ui/Accordion';
+
 import cmLogo from '@/app/assets/icons/logo-blue.svg'
 import Image from 'next/image';
 

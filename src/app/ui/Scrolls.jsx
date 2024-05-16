@@ -1,5 +1,5 @@
-import React from 'react'
 
+import React from "react";
 import {
   Card,
   CardHeader,
@@ -10,7 +10,7 @@ import {
 } from "@material-tailwind/react";
 import { Divider } from "@mui/material";
 
-const CardDefault = () => {
+const CardDefault = ({ name, occupation, review }) => {
   <Card className="max-w-[24rem] overflow-hidden">
     <CardHeader
       floated={false}
@@ -27,8 +27,8 @@ const CardDefault = () => {
       />
       <div>
         {" "}
-        <h5 className="text-h5 mt-3 font-normal">Name</h5>
-        <h6>Occupation</h6>
+        <h5 className="text-h5 mt-3 font-normal">{name}</h5>
+        <h6>{occupation}</h6>
         {/* Rating */}
       </div>
       <Divider />
@@ -36,7 +36,7 @@ const CardDefault = () => {
     <CardBody>
       {" "}
       <div>
-        <p className="text-p">Review text</p>
+        <p className="text-p">{review}</p>
       </div>
     </CardBody>
     <CardFooter className="flex items-center justify-between">
@@ -44,10 +44,45 @@ const CardDefault = () => {
     </CardFooter>
   </Card>;
 };
+
+const reviews = [
+  {
+    id: 1,
+    text: "Pirate ipsum arrgh bounty warp jack. Sink aye pounders schooner road sails arr clipper crow's.",
+  },
+
+  {
+    id: 2,
+    text: "Corsair rat tea topgallant corsair. Crack chantey hang overhaul shiver grog sloop anchor to. Crow's cup boatswain timbers seas poop.",
+  },
+
+  {
+    id: 3,
+    text: "Dataindsamling: Indsamle relevante data fra brugerhenvendelser for at forbedre forretningsprocesser, identificere trends og behov samt målrette fremtidige markedsføringsstrategier.",
+  },
+
+  {
+    id: 4,
+    text: "Klarhed: Sikre tydelige instruktioner og vejledninger, så brugerne ved præcis, hvordan de skal kontakte virksomheden og hvilke oplysninger der kræves.",
+  },
+
+  {
+    id: 5,
+    text: "Konvertering: Øge konverteringsfrekvensen ved at sikre, at brugerne nemt kan komme i kontakt med CyberMinds og få svar på deres spørgsmål eller opfyldt deres behov.",
+  },
+];
+
 export default function SocialProof() {
   return (
     <>
-      <CardDefault/>
+      {reviews.map((review) => (
+        <ReviewCard
+          key={review.id}
+          name="Name"
+          occupation="Occupation"
+          review={review.text}
+        />
+      ))}
     </>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { FilledBtn, IconBtn, OutlinedBtn } from "../ui/Buttons";
 import styles from "../style";
-import { layout } from "../style";
+
 import Header from "./Header";
 
 

@@ -3,7 +3,8 @@ import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import { Hero } from "./components/Hero";
 import Intro from "./components/Intro";
-import Testimonials from "./components/Testimonials";
+
+import SocialProof from "./ui/Scrolls";
 
 //Main Page - struktur og layout...
 const page = () => {
@@ -11,7 +12,7 @@ const page = () => {
     <main>
       <Hero />
       <Intro />
-      <Testimonials/>
+      <SocialProof/>
       <Contact />
       <Faq />
       <Footer />

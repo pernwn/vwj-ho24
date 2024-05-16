@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { createContext } from "react";
+import React from "react";
 import logoWhite from "@/app/assets/icons/logo-white.svg";
 
 import { IconButton } from "@material-tailwind/react";

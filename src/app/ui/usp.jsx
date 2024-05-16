@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../style";
-import { OutlinedBtn } from "./Buttons";
+//import { OutlinedBtn } from "./Buttons";
 
 const USP = () => {
   return (

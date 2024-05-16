@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import styles from '../style'
+//import styles from '../style'
 
 function Icon({ open }) {
   return (
