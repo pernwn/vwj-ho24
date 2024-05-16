@@ -9,9 +9,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 //import {theme} from "/tailwind.config.js"
 
+
 const Header = () => {
   return (
-    <div className={`flex justify-between`}>
+<div className={`flex justify-between`}>
       <Image
         src={logoWhite}
         alt="CyberMinds Logo; Color White"
@@ -27,6 +28,7 @@ const Header = () => {
       </IconButton>
     </div>
   );
-};
+}
 
 export default Header;
+

@@ -6,6 +6,7 @@ const Intro = () => {
     <>
       <USP />
       <div>{/* Text field */}</div>
+      
     </>
   );
 };

@@ -12,4 +12,4 @@ const USP = () => {
   );
 };
 
-export default USP;
+export default USP

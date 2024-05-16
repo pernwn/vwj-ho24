@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from "react";
-//import styles from '../style'
 
-function Icon({ open }) {
+
+const Icon = ({ open }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,6 @@ function Icon({ open }) {
     </svg>
   );
 }
-
 
 
 export default function Accordion({ header, sub, body }) {

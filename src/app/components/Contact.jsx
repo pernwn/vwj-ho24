@@ -1,5 +1,5 @@
 import React from "react";
-import { FormComp } from "../ui/Form";
+import FormComp from "../ui/Form";
 import styles from "../style";
 
 const Contact = () => {

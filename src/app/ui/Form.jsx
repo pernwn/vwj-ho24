@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-export function FormComp() {
+export default function FormComp() {
   return (
     <Card color="transparent" shadow={false}>
       <Typography variant="h4" color="blue-gray">

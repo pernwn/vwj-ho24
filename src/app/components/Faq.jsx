@@ -3,9 +3,7 @@ import React from "react";
 import styles from "../style";
 import Accordion from "../ui/Accordion";
 
-
-
-function Faq() {
+const Faq = () => {
   return (
     <section className={`${styles.padding} flex flex-row gap-16`}>
       <div>
@@ -23,6 +21,6 @@ function Faq() {
       </div>
     </section>
   );
-}
+};
 
 export default Faq;

@@ -8,7 +8,7 @@ import Header from "./Header";
 
 export const Hero = () => {
   return (
-    <section className={`bg-no-repeat bg-center bg-heroimg h-screen bg-cover`}>
+    <section className={`bg-no-repeat bg-center bg-heroimg h-screen w-full bg-cover`}>
       <div
         className={`${styles.padding} h-full w-full bg-cmdark/60 bg-clip-padding backdrop-filter backdrop-blur-md`}
       >

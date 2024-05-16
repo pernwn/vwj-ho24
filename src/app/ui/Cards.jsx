@@ -1,7 +1,56 @@
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+//import Typography from "@mui/material/Typography";
+import { Divider } from "@mui/material";
+import { reviews } from "./reviews";
 
-// import React from "react";
-// import { FilledBtn } from "./Buttons";
 
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+  >
+    •
+  </Box>
+);
+
+const ReviewCard = ({ name, occupation, review }) => {
+  return (
+    <Card>
+      <CardContent>
+        <div>
+          {/* User Image */}
+          <h5 className="text-h5 mt-3 font-medium">{name}</h5>
+          <h6 className="text-h6 font-normal">{occupation}</h6>
+        </div>
+        <Divider />
+        <p className="text-p">{review}</p>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+  );
+};
+
+export default function Testimonials() {
+  return (
+    <Box sx={{ minWidth: 275 }}>
+        {reviews.map((review) => (
+          <ReviewCard
+            key={review.id}
+            name="Name"
+            occupation="Occupation"
+            review={review.text}
+          />
+        ))}
+    </Box>
+  );
+}
 
 // export const Card = () => {
 //   return (
@@ -65,5 +114,3 @@
 //     </div>
 //   );
 // };
-
-export default { CardDefault };
