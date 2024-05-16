@@ -4,7 +4,7 @@ import styles from "../style";
 
 const USP = () => {
   return (
-    <div className={`${styles.padding} flex flex-row justify-around`}>
+    <div className={`${styles.padding} flex flex-row justify-around text-cmaccent text-h4`}>
       <div>USP 1</div>
       <div>USP 2</div>
       <div>USP 3</div>

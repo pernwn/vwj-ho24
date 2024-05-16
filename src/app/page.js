@@ -13,12 +13,13 @@ import Contact from "./components/Contact";
 import Benefits from "./components/Benefits";
 import Info from "./components/Info";
 
+
 const page = () => {
   return (
     <main>
       <Hero />
       <Intro />
-      <Benefits/>
+      <Benefits />
       <Info/>
       <Contact />
       <Faq />

@@ -1,16 +1,22 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import { FilledBtn, IconBtn, OutlinedBtn } from "../ui/Buttons";
 import styles from "../style";
 
 import Header from "./Header";
-
-
+import { Button } from "@material-tailwind/react";
 
 export const Hero = () => {
+  const [isHovering, setIsHovering] = useState(false);
+  const hovering = () => setIsHovering(true);
+  const notHovering = () => setIsHovering(false);
+
   return (
-    <section className={`bg-no-repeat bg-center bg-heroimg h-screen w-full bg-cover`}>
+    <section
+      className={`bg-no-repeat bg-center bg-heroimg h-screen w-full bg-cover`}
+    >
       <div
-        className={`${styles.padding} h-full w-full bg-cmdark/60 bg-clip-padding backdrop-filter backdrop-blur-md`}
+        className={`${styles.padding} h-full w-full bg-cmdark/60 bg-clip-padding backdrop-filter backdrop-blur-xl`}
       >
         <Header />
         <div className={`w-2/3 space-y-4 ${styles.paddingY}`}>
@@ -21,7 +27,17 @@ export const Hero = () => {
             CyberMinds er et IT-sikkerheds freelancehus, hvor vi stiller
             Danmarks bedste IT-sikkerhedseksperter til rådighed for dig.
           </h4>
-          <FilledBtn title="Kontakt"/>
+          <Button
+            onMouseEnter={hovering}
+            onMouseLeave={notHovering}
+            className={`flex items-center translate-y-4 hover:bg-cmprimary/20 hover:translate-y-3 rounded-full border-2 border-cmprimary font-normal hover:font-medium cursor-pointer py-2 px-8 bg-cmprimary active:translate-y-2 transition-all duration-300 ease-out transform`}
+          >
+            {isHovering ? (
+              <p className="text-cmwhite text-p">Få uforpligtende tilbud</p>
+            ) : (
+              <p className="text-cmwhite text-p">Kontakt os</p>
+            )}
+          </Button>
         </div>
 
         {/* <div>

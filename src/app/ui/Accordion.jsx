@@ -41,9 +41,8 @@ export default function Accordion({ header, sub, body }) {
         <Icon open={open} />
       </div>
       {open && (
-        <div className="py-4">
-          {" "}
-          <h5 className={`font-medium`}>{sub}</h5>
+        <div className="py-6 w-fit h-auto">
+          <h5 className={`text-h5 font-medium`}>{sub}</h5>
           <p>{body}</p>
         </div>
       )}

@@ -3,6 +3,7 @@ import styles from "../style";
 
 import { ReviewCard, SimpleCard } from "../ui/Cards";
 import { reviews } from "../ui/reviews";
+import { FilledBtn } from "../ui/Buttons";
 
 //import SocialProof from "../ui/SocialProof";
 
@@ -18,8 +19,10 @@ const Para = ({ header, body }) => {
 const Benefits = () => {
   return (
     <section className={`bg-cmprimary ${styles.paddingY} w-full`}>
+      {/* Testimonials / social proof */}
       <div className={`flex-col ${styles.flexCenter} w-full h-auto`}>
         <Para header="Header" body="Body text" />
+        {/* TODO: carousel with buttons and dots - possibly with smooth transition? */}
         <div className={`max-w-full overflow-x-auto flex flex-row pb-16`}>
           {reviews.map((review) => (
             <ReviewCard
@@ -27,20 +30,23 @@ const Benefits = () => {
               name="Name"
               occupation="Occupation"
               review={review.text}
+              rating={review.rating}
             />
           ))}
         </div>
       </div>
 
+      {/* Services */}
       <div className={`flex-col ${styles.flexCenter} w-full h-auto`}>
         <Para header="Header" body="Body text" />
-        <div>
+        <div className="grid grid-cols-2 gap-x-4">
           {/* TODO: GRID */}
           <SimpleCard content="Simple Line" action="Læs mere" />
           <SimpleCard content="Simple Line" action="Læs mere" />
           <SimpleCard content="Simple Line" action="Læs mere" />
           <SimpleCard content="Simple Line" action="Læs mere" />
         </div>
+        <FilledBtn title="Få et tilbud"/>
       </div>
     </section>
   );

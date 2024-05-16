@@ -31,7 +31,7 @@ module.exports = {
     //   lato: ["Lato", "sans-serif"]
     // },
     dropShadow: {
-      sm: "0 4px 4px #021C30",
+      sm: "4px 12px 12px #021C30",
     },
 
     extend: {

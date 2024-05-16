@@ -4,9 +4,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
 import { Divider } from "@mui/material";
-import CardActions from "@mui/material/CardActions";
 
-import Button from "@mui/material/Button";
 
 import styles from "../style"
 
@@ -16,7 +14,7 @@ export const ReviewCard = ({ name, occupation, review }) => {
     <Card className="mx-2 min-w-[275px] min-h-[350px]">
       <CardContent>
         <div className="flex flex-row pb-4">
-          <div className="w-1/2">{/* TODO: User Image */} hej</div>
+          <div className="w-1/2">{/* TODO: User Image */} UserImg</div>
 
           <div className="w-1/2">
             <h5 className="text-h5 mt-3 font-medium">{name}</h5>
