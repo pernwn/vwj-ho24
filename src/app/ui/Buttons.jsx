@@ -8,8 +8,8 @@ export const FilledBtn = (props) => {
 
   return (
     <a href={url}>
-      <Button className="flex items-center gap-2 text-cmwhite text-base hover:text-lg rounded-full border-2 border-cmprimary font-normal tracking-normal hover:font-medium hover:tracking-wider cursor-pointer py-2 px-8 my-8 mx-0 bg-cmprimary active:translate-y-0 transition-all duration-300 ease-out transform">
-        {title} {icon}
+      <Button className={`flex items-center gap-2 hover:bg-cmprimary/20 hover:-translate-y-1 rounded-full border-2 border-cmprimary font-normal hover:font-medium cursor-pointer py-2 px-8 my-8 mx-0 bg-cmprimary active:translate-y-0 transition-all duration-300 ease-out transform`}>
+        <p className="text-cmwhite text-p">{title}</p> {icon}
       </Button>
     </a>
   );
@@ -20,8 +20,8 @@ export const OutlinedBtn = (props) => {
 
   return (
     <a href={url}>
-      <Button className="flex items-center text-base hover:-translate-y-1  active:translate-y-0 gap-4 cursor-pointer px-6 mx-0 text-cmprimary font-normal tracking-normal hover:font-medium bg-cmaccent rounded-xl border-solid border-cmaccent border-2 bg-clip-padding backdrop-filter backdrop-blur-sm hover:bg-cmprimary hover:bg-opacity-40 hover:text-cmwhite transition-all ease-in-out duration-300">
-        {title}
+      <Button className="flex items-center text-base hover:-translate-y-1  active:translate-y-0 gap-4 cursor-pointer m-4 text-cmprimary font-normal tracking-normal hover:font-medium bg-cmaccent rounded-xl border-solid border-cmaccent border-2 bg-clip-padding backdrop-filter backdrop-blur-sm hover:bg-cmprimary hover:bg-opacity-40 hover:text-cmwhite transition-all ease-in-out duration-300">
+        <p className="text-cmwhite text-p">{title}</p>
         {icon}
       </Button>
     </a>

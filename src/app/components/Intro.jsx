@@ -1,8 +1,16 @@
 import React from 'react'
+import USP from '../ui/usp'
 
 const Intro = () => {
   return (
-    <div>Intro</div>
+    <>
+      <USP/>
+      <div>
+         {/* Text field */}
+      </div>
+
+
+    </>
   )
 }
 

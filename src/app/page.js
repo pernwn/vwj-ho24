@@ -1,19 +1,22 @@
-
-import { Hero } from "./components/Hero"
+import Contact from "./components/Contact";
+import Faq from "./components/Faq";
+import Footer from "./components/Footer";
+import { Hero } from "./components/Hero";
 import Intro from "./components/Intro";
-import USP from "./ui/usp";
-
-
+import Testimonials from "./components/Testimonials";
 
 //Main Page - struktur og layout...
 const page = () => {
   return (
     <main>
       <Hero />
-      <USP />
-      <Intro/>
+      <Intro />
+      <Testimonials/>
+      <Contact />
+      <Faq />
+      <Footer />
     </main>
   );
-}
+};
 
 export default page;

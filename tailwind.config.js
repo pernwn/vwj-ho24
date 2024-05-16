@@ -15,7 +15,47 @@ module.exports = {
       cmsecondary: "#86bae2",
       cmaccent: "#ff7857",
     },
-    // colorShades: {
+
+    screens: {
+      xs: "480px",
+      ss: "620px",
+      sm: "768px",
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
+    },
+
+    // fontFamily: {
+    //   josefinSans: ["Josefin Sans", "sans-serif"],
+    //   lato: ["Lato", "sans-serif"]
+    // },
+    dropShadow: {
+      sm: "0 4px 4px #021C30",
+    },
+
+    extend: {
+      backgroundImage: {
+        heroimg: "url('/heroimg.jpeg')",
+      },
+
+
+      fontSize: {
+        sm: "0.750rem",
+        p: "1rem",
+        h5: "1.333rem",
+        h4: "1.777rem",
+        h3: "2.369rem",
+        h2: "3.158rem",
+        h1: "4.210rem",
+      },
+    },
+  },
+  plugins: [],
+};
+
+
+
+// colorShades: {
     //   text: {
     //     50: "var(--text-50)",
     //     100: "var(--text-100)",
@@ -82,37 +122,3 @@ module.exports = {
     //     950: "var(--accent-950)",
     //   },
     //},
-    // fontFamily: {
-    //   josefinSans: ["Josefin Sans", "sans-serif"],
-    //   lato: ["Lato", "sans-serif"]
-    // },
-    dropShadow: {
-      "3xl": "0 35px 35px #021C30",
-    },
-
-    extend: {
-      backgroundImage: {
-        heroimg: "url('/heroimg.jpeg')",
-      },
-
-      fontSize: {
-        sm: "0.750rem",
-        base: "1rem",
-        xl: "1.333rem",
-        "2xl": "1.777rem",
-        "3xl": "2.369rem",
-        "4xl": "3.158rem",
-        "5xl": "4.210rem",
-      },
-    },
-    screens: {
-      xs: "480px",
-      ss: "620px",
-      sm: "768px",
-      md: "1060px",
-      lg: "1200px",
-      xl: "1700px",
-    },
-  },
-  plugins: [],
-};

@@ -1,11 +1,9 @@
 
-import FaqFooter from "./components/faqFooter";
-import styles from "./style";
-
 import "./globals.css";
 
 
 import { Josefin_Sans, Lato } from 'next/font/google';
+
 
 
 const josefin_Sans = Josefin_Sans({
@@ -34,7 +32,7 @@ export default function RootLayout({ children }) {
         className={`${josefin_Sans.variable} mx-auto max-w-[1920px] overflow-x-hidden ${lato.variable} mx-auto max-w-[1920px] overflow-x-hidden`}
       >
         <main className="flex-grow h-screen">{children}</main>
-        <FaqFooter />
+
       </body>
     </html>
   );

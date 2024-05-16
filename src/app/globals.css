@@ -1,3 +1,5 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,14 +19,26 @@
   }
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3{
   font-family: var(--font-josefin);
+  color:var(--text-800);
+  line-height:1.2;
+  font-weight: 600;
+}
 
+h4, h5, h6{
+    font-family: var(--font-josefin);
+  color:var(--text-800);
+  line-height:1;
+  font-weight: 400;
 }
 
 p{
   font-family: var(--font-lato);
+  color:var(--text-900);
 }
+
+
 
 @layer base {
   :root {

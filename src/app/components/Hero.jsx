@@ -8,19 +8,19 @@ import Header from "./Header";
 
 export const Hero = () => {
   return (
-    <section className={`bg-no-repeat bg-center bg-heroimg h-full bg-contain`}>
+    <section className={`bg-no-repeat bg-center bg-heroimg h-screen bg-cover`}>
       <div
         className={`${styles.padding} h-full w-full bg-cmdark/60 bg-clip-padding backdrop-filter backdrop-blur-md`}
       >
         <Header />
         <div className={`w-2/3 space-y-4 ${styles.paddingY}`}>
-          <h1 className={`${styles.h1} text-cmwhite`}>
+          <h1 className={`text-h1 text-cmwhite`}>
             Cybersikkerhed til <i>dine</i> behov
           </h1>
-          <h2 className="text-cmwhite text-2xl leading-[34px]">
+          <h4 className="text-cmwhite text-h4">
             CyberMinds er et IT-sikkerheds freelancehus, hvor vi stiller
             Danmarks bedste IT-sikkerhedseksperter til rådighed for dig.
-          </h2>
+          </h4>
           <FilledBtn title="Kontakt"/>
         </div>
 
