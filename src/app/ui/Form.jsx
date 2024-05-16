@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import {
   Card,
@@ -10,18 +10,19 @@ import {
 
 export default function FormComp() {
   return (
-    <Card color="transparent" shadow={false}>
-      <Typography variant="h4" color="blue-gray">
-        Sign Up
-      </Typography>
-      <Typography color="gray" className="mt-1 font-normal">
-        Nice to meet you! Enter your details to register.
-      </Typography>
+    <Card color="transparent" shadow={false} className="text-cmwhite">
       <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
         <div className="mb-1 flex flex-col gap-6">
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
-            Your Name
-          </Typography>
+          <h6 className="text-h6 -mb-3 text-cmsecondary">Navn</h6>
+          <Input
+            size="lg"
+            placeholder="Jens Jensen"
+            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+            labelProps={{
+              className: "before:content-none after:content-none",
+            }}
+          />
+          <h6 className="text-h6 -mb-3 text-cmsecondary">Email</h6>
           <Input
             size="lg"
             placeholder="name@mail.com"
@@ -30,24 +31,12 @@ export default function FormComp() {
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
-            Your Email
-          </Typography>
+          <h6 className="text-h6 -mb-3 text-cmsecondary">
+            Beskriv hvordan vi kan hjælpe dig
+          </h6>
           <Input
             size="lg"
-            placeholder="name@mail.com"
-            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-            labelProps={{
-              className: "before:content-none after:content-none",
-            }}
-          />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
-            Password
-          </Typography>
-          <Input
-            type="password"
-            size="lg"
-            placeholder="********"
+            placeholder="Jeg ønsker at indlede en dialog med jeres team for at diskutere vores specifikke behov og krav til IT-sikkerhed. Vores virksomhed opererer i en branche, hvor..."
             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",

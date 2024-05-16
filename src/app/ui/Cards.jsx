@@ -1,56 +1,52 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
+
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-//import Typography from "@mui/material/Typography";
+
 import { Divider } from "@mui/material";
-import { reviews } from "./reviews";
+import CardActions from "@mui/material/CardActions";
+
+import Button from "@mui/material/Button";
+
+import styles from "../style"
 
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
-
-const ReviewCard = ({ name, occupation, review }) => {
+export const ReviewCard = ({ name, occupation, review }) => {
   return (
-    <Card>
+    <Card className="mx-2 min-w-[275px] min-h-[350px]">
       <CardContent>
-        <div>
-          {/* User Image */}
-          <h5 className="text-h5 mt-3 font-medium">{name}</h5>
-          <h6 className="text-h6 font-normal">{occupation}</h6>
+        <div className="flex flex-row pb-4">
+          <div className="w-1/2">{/* TODO: User Image */} hej</div>
+
+          <div className="w-1/2">
+            <h5 className="text-h5 mt-3 font-medium">{name}</h5>
+            <h6 className="text-h6 font-normal">{occupation}</h6>
+            {/* TODO: Rating */}
+          </div>
         </div>
         <Divider />
-        <p className="text-p">{review}</p>
+        <div className="py-4 overflow-y-auto">
+          {" "}
+          <p className="text-p">{review}</p>
+        </div>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 };
 
-export default function Testimonials() {
-  return (
-    <Box sx={{ minWidth: 275 }}>
-        {reviews.map((review) => (
-          <ReviewCard
-            key={review.id}
-            name="Name"
-            occupation="Occupation"
-            review={review.text}
-          />
-        ))}
-    </Box>
-  );
-}
+
+export const SimpleCard = ({content, action}) => {
+    return (
+      <Card className={`w-[275px] ${styles.flexCenter} flex-col p-8 mb-4`}>
+          <h4 className="text-h5">{content}</h4>
+      </Card>
+    );
+};
+
+
+
+
+
 
 // export const Card = () => {
 //   return (

@@ -5,10 +5,12 @@ import Accordion from "../ui/Accordion";
 
 const Faq = () => {
   return (
-    <section className={`${styles.padding} flex flex-row gap-16`}>
-      <div>
-        <h2 className="text-h2">Heading</h2>
-        <h3 className="text-h3">Subtitle</h3>
+    <section
+      className={`${styles.padding} ${styles.paddingY} flex flex-row gap-16`}
+    >
+      <div className="space-y-2">
+        <h2 className="text-h2">Fortsat i tvivl?</h2>
+        <h4 className="text-h4">Få svar i vores FAQ</h4>
         <p className="text-p">
           Find svar på oftede stillede spørgsmål for hjælp og klarhed.
         </p>

@@ -20,7 +20,7 @@
 h1, h2, h3{
   font-family: var(--font-josefin);
   color:var(--text-700);
-  line-height:1.2;
+  line-height:1;
   font-weight: 600;
 }
 
@@ -34,6 +34,7 @@ h4, h5, h6{
 p{
   font-family: var(--font-lato);
   color:var(--text-900);
+  font-weight: normal;
 }
 
 

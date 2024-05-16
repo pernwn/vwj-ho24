@@ -23,4 +23,20 @@ export const reviews = [
     id: 5,
     text: "Konvertering: Øge konverteringsfrekvensen ved at sikre, at brugerne nemt kan komme i kontakt med CyberMinds og få svar på deres spørgsmål eller opfyldt deres behov.",
   },
+  {
+    id: 7,
+    text: "Konvertering: Øge konverteringsfrekvensen ved at sikre, at brugerne nemt kan komme i kontakt med CyberMinds og få svar på deres spørgsmål eller opfyldt deres behov.",
+  },
+  {
+    id: 8,
+    text: "Konvertering: Øge konverteringsfrekvensen ved at sikre, at brugerne nemt kan komme i kontakt med CyberMinds og få svar på deres spørgsmål eller opfyldt deres behov.",
+  },
+  {
+    id: 9,
+    text: "Konvertering: Øge konverteringsfrekvensen ved at sikre, at brugerne nemt kan komme i kontakt med CyberMinds og få svar på deres spørgsmål eller opfyldt deres behov.",
+  },
+  {
+    id: 10,
+    text: "Konvertering: Øge konverteringsfrekvensen ved at sikre, at brugerne nemt kan komme i kontakt med CyberMinds og få svar på deres spørgsmål eller opfyldt deres behov.",
+  },
 ];
