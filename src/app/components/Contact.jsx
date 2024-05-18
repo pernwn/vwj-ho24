@@ -1,6 +1,7 @@
 import React from "react";
 import FormComp from "../ui/Form";
 import styles from "../style";
+import Form from "../ui/FormComp";
 
 const Contact = () => {
   return (
@@ -20,7 +21,7 @@ const Contact = () => {
           Lad os være din partner i kampen mod cyberkriminalitet.
         </p>
       </div>
-      <FormComp className="w-1/2" />
+      <FormComp/>
     </section>
   );
 };
