@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from "react";
-import { FilledBtn, IconBtn, OutlinedBtn } from "../ui/Buttons";
+import { FilledBtn, IconBtn, OutlinedBtn } from "../ui/buttons";
 import styles from "../style";
 
-import Header from "./Header";
+import Header from "./header";
 import { Button } from "@material-tailwind/react";
 
 export const Hero = () => {

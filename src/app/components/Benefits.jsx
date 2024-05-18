@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../style";
 
-import { ReviewCard, SimpleCard } from "../ui/Cards";
+import { ReviewCard, SimpleCard } from "../ui/cards";
 import { reviews } from "../ui/reviews";
-import { FilledBtn } from "../ui/Buttons";
+import { FilledBtn } from "../ui/buttons";
 
 //import SocialProof from "../ui/SocialProof";
 

@@ -1,14 +1,16 @@
 import React from "react";
-import FormComp from "../ui/Form";
+import FormComp from "../ui/form";
 import styles from "../style";
-import Form from "../ui/FormComp";
+import { OutlinedBtn } from "../ui/buttons";
+
+
 
 const Contact = () => {
   return (
     <section
-      className={`${styles.padding} ${styles.paddingY} flex flex-row gap-16 bg-cmprimary`}
+      className={`${styles.padding} ${styles.paddingY} flex flex-row gap-16 bg-cmprimary ${styles.flexStart}`}
     >
-      <div className={`flex-col space-y-4 w-1/2`}>
+      <div className={`flex-col w-1/2`}>
         <h2 className="text-h2 text-cmwhite">
           Klar til at styrke din virksomheds IT-sikkerhed?
         </h2>
@@ -20,8 +22,13 @@ const Contact = () => {
           <br />
           Lad os være din partner i kampen mod cyberkriminalitet.
         </p>
+        <div>
+          <OutlinedBtn title="linkedin cta"/>
+        </div>
       </div>
-      <FormComp/>
+      <FormComp />
+
+
     </section>
   );
 };

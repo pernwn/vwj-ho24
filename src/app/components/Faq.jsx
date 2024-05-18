@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "../style";
-import Accordion from "../ui/Accordion";
+import Accordion from "../ui/accordion";
 
 const Faq = () => {
   return (
