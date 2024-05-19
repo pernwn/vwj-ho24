@@ -10,7 +10,7 @@ const Contact = () => {
     <section
       className={`${styles.padding} ${styles.paddingY} flex flex-row gap-16 bg-cmprimary ${styles.flexStart}`}
     >
-      <div className={`flex-col w-1/2`}>
+      <div className={`flex-col w-1/2 space-y-6`}>
         <h2 className="text-h2 text-cmwhite">
           Klar til at styrke din virksomheds IT-sikkerhed?
         </h2>
