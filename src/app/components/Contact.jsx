@@ -2,6 +2,8 @@ import React from "react";
 import FormComp from "../ui/form";
 import styles from "../style";
 import { OutlinedBtn } from "../ui/buttons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 
 
@@ -23,7 +25,7 @@ const Contact = () => {
           Lad os være din partner i kampen mod cyberkriminalitet.
         </p>
         <div>
-          <OutlinedBtn title="linkedin cta"/>
+          <h5 className="text-h5 text-cmaccent">Fang os nemt på <FontAwesomeIcon icon={faLinkedin} size="xl" className="hover:text-cmsecondary hover:cursor-pointer ml-2"/></h5>
         </div>
       </div>
       <FormComp />
