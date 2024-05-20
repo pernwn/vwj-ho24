@@ -9,14 +9,6 @@ module.exports = {
 
   mode: "jit",
   theme: {
-    colors: {
-      cmdark: "#021C30",
-      cmwhite: "#f5f5f5",
-      cmprimary: "#003cee",
-      cmsecondary: "#86bae2",
-      cmaccent: "#ff7857",
-    },
-
     screens: {
       xs: "480px",
       ss: "620px",
@@ -30,15 +22,19 @@ module.exports = {
     //   josefinSans: ["Josefin Sans", "sans-serif"],
     //   lato: ["Lato", "sans-serif"]
     // },
-    dropShadow: {
-      sm: "4px 12px 12px #021C30",
-    },
 
     extend: {
       backgroundImage: {
         heroimg: "url('/heroimg.jpeg')",
       },
 
+      colors: {
+        cmdark: "#021C30",
+        cmwhite: "#f5f5f5",
+        cmprimary: "#003cee",
+        cmsecondary: "#86bae2",
+        cmaccent: "#ff7857",
+      },
 
       fontSize: {
         sm: "0.750rem",
@@ -48,6 +44,23 @@ module.exports = {
         h3: "2.369rem",
         h2: "3.158rem",
         h1: "4.210rem",
+      },
+
+      dropShadow: {
+        sm: "4px 12px 12px #021C30",
+      },
+
+      animation: {
+        "marquee-slower": "marquee 30s linear infinite",
+        marquee: "marquee 27s linear infinite",
+        "marquee-faster": "marquee 15s linear infinite",
+        "scroll-slower": "scroll 15s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
     },
   },

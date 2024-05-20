@@ -5,6 +5,7 @@ import styles from "../style";
 
 import Header from "./header";
 import { Button } from "@material-tailwind/react";
+import BasicSlider from "../ui/basicSlider";
 
 export const Hero = () => {
   const [isHovering, setIsHovering] = useState(false);

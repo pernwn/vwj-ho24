@@ -10,13 +10,15 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Contact = () => {
   return (
     <section
-      className={`${styles.padding} ${styles.paddingY} flex flex-row gap-16 bg-cmprimary ${styles.flexStart}`}
+      className={`${styles.padding} flex flex-row gap-16 bg-cmprimary ${styles.flexStart} rounded-bl-[16em] rounded-tr-[16em] rounded-tl-[4em] rounded-br-[4em]`}
     >
-      <div className={`flex-col w-1/2 space-y-6`}>
+      <div className={`flex-col w-1/2 space-y-6 pl-8 py-16`}>
         <h2 className="text-h2 text-cmwhite">
           Klar til at styrke din virksomheds IT-sikkerhed?
         </h2>
-        <h4 className="text-h4 text-cmwhite">Tag det første skridt mod bedre IT-sikkerhed</h4>
+        <h4 className="text-h4 text-cmwhite">
+          Tag det første skridt mod bedre cybersikkerhed
+        </h4>
         <p className="text-p text-cmwhite">
           Kontakt os i dag for en gratis konsultation, hvor vi sammen kan
           identificere dine behov og udvikle en skræddersyet løsning til at
@@ -25,12 +27,19 @@ const Contact = () => {
           Lad os være din partner i kampen mod cyberkriminalitet.
         </p>
         <div>
-          <h5 className="text-h5 text-cmaccent">Fang os nemt på <FontAwesomeIcon icon={faLinkedin} size="xl" className="hover:text-cmsecondary hover:cursor-pointer ml-2"/></h5>
+          <h5 className="text-h5 text-cmaccent">
+            Fang os nemt på{" "}
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              size="xl"
+              className="hover:text-cmsecondary hover:cursor-pointer ml-2 "
+            />
+          </h5>
         </div>
       </div>
-      <FormComp />
-
-
+      <div className="pl-8 py-16">
+        <FormComp />
+      </div>
     </section>
   );
 };
