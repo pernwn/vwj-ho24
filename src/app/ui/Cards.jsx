@@ -8,20 +8,20 @@ import { Rating } from "./reviews";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
+import { FilledBtn } from "./buttons";
 export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
   return (
     <motion.div
       whileHover={{
-        scale: 1.1,
+        scale: 1.01,
         y: -10,
         zIndex: 1,
         transition: { duration: 0.4 },
-        
       }}
-      className="mx-4 px-2 w-[20rem] h-full rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-4 border-cmsecondary"
+      className="p-4 min-w-[8 rem] mx-4 min-h-[25rem] space-x-4 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-4 border-cmsecondary"
     >
       <CardContent>
-        <div className="flex flex-row pb-4 items-center h-full">
+        <div className="flex flex-row pb-4 items-center h-full ">
           <div className="w-1/3 rounded-full">
             <Image
               src={avatarImg}
@@ -56,3 +56,15 @@ export const SimpleCard = ({ content, action }) => {
     </Card>
   );
 };
+
+export const VidCard = ({title, content, btn}) => {
+  return (
+    <Card
+      className={`w-[275px] ${styles.flexCenter} flex-col rounded-lg p-8 mb-4 bg-cmsecondary/50`}
+    >
+      <h4 className="text-h5 text-cmwhite">{title}</h4>
+      <p className="text-p">{content}</p>
+      <FilledBtn title={btn}/>
+    </Card>
+  );
+}

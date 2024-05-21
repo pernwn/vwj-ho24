@@ -20,6 +20,7 @@ const ExplainerCard = () => {
         >
           <div className="text-center space-x-4">
             <h2 className="text-h2">Din sikkerhed, vores ansvar</h2>
+            
           </div>
         </div>
       </Card>

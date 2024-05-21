@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,7 +14,8 @@ import avatar9 from "../assets/backgrounds/avatar9.png";
 import avatar10 from "../assets/backgrounds/avatar10.png";
 import { ReviewCard } from "./cards";
 import { useState } from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import { Carousel } from "@material-tailwind/react";
 
 const reviews = [
   {
@@ -99,7 +100,7 @@ const reviews = [
   },
 ];
 
-export const Rating = ({rating}) => {
+export const Rating = ({ rating }) => {
   return (
     <div className="flex">
       {[...Array(5)].map((_, i) => (
@@ -111,40 +112,42 @@ export const Rating = ({rating}) => {
       ))}
     </div>
   );
-}
+};
 
-export const ReviewComp = () => { 
+export const ReviewComp = () => {
+  const duplicateSlides = [...reviews, ...reviews]
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleNextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % reviews.length)
-  }
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % reviews.length);
+  };
 
   const handlePrevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide -1 +reviews.length) % reviews.length)
-  }
-
+    setCurrentSlide(
+      (prevSlide) => (prevSlide - 1 + reviews.length) % reviews.length
+    );
+  };
 
   return (
-<div className="relative">
-      <div
-        className={`max-w-full h-auto overflow-x-auto flex flex-row pb-16 pt-12`}
-      >
+    <div className="relative overflow-hidden">
+      
+      <div className={`max-w-full h-auto flex flex-row pb-16 pt-12`}>
         <motion.div
-        className="flex"
-        animate = {{
-          x:`-1{currentSlide * 100}%`,
-          transition:{
-            ease:"linear",
-            duration:0.4,
-          }
-        }}
+          className="flex"
+          animate={{
+            x: `-${currentSlide * 8}%`,
+          }}
+          transition={{
+            ease: "linear",
+            duration: 0.4,
+          }}
+          style={{ width: `${reviews.length * 200}%`}}
         >
-          {reviews.map((review, index) => (
+          {duplicateSlides.map((review, index) => (
             <div
               key={index}
               className="flex-shrink-0"
-              // style={{ width: `${100/reviews.length}%` }}
+              style={{ width: `${100 / reviews.length}%` }}
             >
               <ReviewCard
                 key={review.id}
@@ -158,25 +161,31 @@ export const ReviewComp = () => {
           ))}
         </motion.div>
       </div>
-      
+
       <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
         {reviews.map((_, index) => (
-          <div key={index}
-          className={`w-2 h-2 rounded-full cursor-pointer ${index === currentSlide ? "bg-cmdark" :"bg-cmwhite/40"}`} 
-          onClick={() => setCurrentSlide(index)}></div>
+          <div
+            key={index}
+            className={`w-2 h-2 rounded-full cursor-pointer ${
+              index === currentSlide ? "bg-cmdark" : "bg-cmwhite/40"
+            }`}
+            onClick={() => setCurrentSlide(index)}
+          ></div>
         ))}
       </div>
-      <button className="absolute top-1/2 transform -translate-y-1/2 left-4 bg-cmdark rounded-full w-8 h-8 text-cmwhite flex items-center justify-center"
-      onClick={handlePrevSlide}>
+      <button
+        className="absolute top-1/2 transform -translate-y-1/2 left-4 bg-cmdark rounded-full w-8 h-8 text-cmwhite flex items-center justify-center"
+        onClick={handlePrevSlide}
+      >
         {"<"}
       </button>
-            <button className="absolute top-1/2 transform -translate-y-1/2 left-4 bg-cmdark rounded-full w-8 h-8 text-cmwhite flex items-center justify-center"
-      onClick={handleNextSlide}>
+      <button
+        className="absolute top-1/2 transform -translate-y-1/2 right-4 bg-cmdark rounded-full w-8 h-8 text-cmwhite flex items-center justify-center"
+        onClick={handleNextSlide}
+      >
         {">"}
       </button>
-  
-
-      
-</div>
+    </div>
   );
-}
+};
+
