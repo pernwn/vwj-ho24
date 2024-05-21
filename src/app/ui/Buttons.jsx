@@ -10,15 +10,16 @@ export const FilledBtn = (props) => {
   return (
     <a href={url}>
       <Button
-        className={`flex items-center translate-y-4 hover:bg-cmprimary/20 hover:translate-y-3 rounded-full border-2 border-cmprimary font-normal hover:font-medium cursor-pointer py-2 px-8 bg-cmprimary active:translate-y-2 transition-all duration-300 ease-out transform`}
+        className={`flex items-center translate-y-4  hover:bg-[#ED532D] hover:translate-y-3 rounded-full border-2 border-cmaccent font-normal cursor-pointer py-4 px-8 bg-cmaccent active:translate-y-2 transition-all duration-300 ease-out transform`}
       >
-        <p className="text-cmwhite text-p">
+        <p className="text-cmwhite text-p font-medium">
           {title} {icon}
         </p>
       </Button>
     </a>
   );
 };
+
 
 export const OutlinedBtn = (props) => {
   const { title, url, icon } = props;

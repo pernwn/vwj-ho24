@@ -1,7 +1,6 @@
 import React from "react";
 import FormComp from "../ui/form";
 import styles from "../style";
-import { OutlinedBtn } from "../ui/buttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -10,7 +9,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Contact = () => {
   return (
     <section
-      className={`${styles.padding} flex flex-row gap-16 bg-cmprimary ${styles.flexStart} rounded-bl-[16em] rounded-tr-[16em] rounded-tl-[4em] rounded-br-[4em]`}
+      className={`${styles.padding} flex flex-row gap-16 bg-cmprimary ${styles.flexStart} rounded-bl-[12em] rounded-tr-[12em]`}
     >
       <div className={`flex-col w-1/2 space-y-6 pl-8 py-16`}>
         <h2 className="text-h2 text-cmwhite">

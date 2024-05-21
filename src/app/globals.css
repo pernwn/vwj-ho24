@@ -24,10 +24,6 @@
   .lato {
     --font-lato: var(--font-lato);
   }
-
-  .disBtn {
-   --disabled:bg-blend-multiply;
-  }
 }
 
 h1,

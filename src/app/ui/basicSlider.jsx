@@ -1,30 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { reviews } from "../ui/reviews";
-import { ReviewCard } from "./cards";
 
-//TODO: enten er det reviews der skal scroll, eller tilføj i hero scroll af deres samarbejdspartnere
-const ReviewSlider = () => {
+//TODO: samarbejds partnere slider i hero
+const cmPartners = () => {
   const duplicateSlides = [...reviews, ...reviews];
-const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className={`max-w-full overflow-x-auto flex flex-row pb-28 no-scrollbar`}>
+    <div
+      className={`max-w-full h-auto overflow-x-auto flex flex-row pb-16 pt-12 no-scrollbar`}
+    >
       <motion.div
         className="flex"
         animate={{
           x: ["-100%", "0%"],
           transition: {
             ease: "linear",
-            duration: 100,
+            duration: 200,
             repeat: Infinity,
           },
         }}
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
-        style={{ pointerEvents: isHovered ? "none" : "auto" }}
       >
         {/* Render duplicated slides */}
         {duplicateSlides.map((review, index) => (
@@ -35,10 +31,11 @@ const [isHovered, setIsHovered] = useState(false);
           >
             <ReviewCard
               key={review.id}
-              name="Name"
-              occupation="Occupation"
+              name={review.name}
+              occupation={review.occupation}
               review={review.text}
-              rating={review.rating}
+              stars={review.rating}
+              avatarImg={review.avatar}
             />
           </div>
         ))}
@@ -47,4 +44,4 @@ const [isHovered, setIsHovered] = useState(false);
   );
 };
 
-export default ReviewSlider;
+export default cmPartners;

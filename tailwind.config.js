@@ -50,6 +50,10 @@ module.exports = {
         sm: "4px 12px 12px #021C30",
       },
 
+      boxShadow: {
+        "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      },
+
       animation: {
         "marquee-slower": "marquee 30s linear infinite",
         marquee: "marquee 27s linear infinite",
