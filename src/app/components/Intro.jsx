@@ -22,7 +22,7 @@ const CircleCard = () => {
       >
         <BackgroundCircles />
         <div
-          className={`${styles.padding} relative z-10 flex flex-col items-center justify-center w-[38rem] h-[38em] bg-cmwhite/75 shadow-lg rounded-full bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-75 border border-cmdark/5`}
+          className={`${styles.padding} relative z-10 flex flex-col items-center justify-center w-[38rem] h-[38em] bg-cmwhite/75 shadow-lg rounded-full bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-50 border border-cmdark/5`}
         >
           <div className="text-center space-x-4">
             <h2 className="text-h2">Hvem er CyberMinds?</h2>

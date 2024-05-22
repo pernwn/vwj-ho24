@@ -1,6 +1,5 @@
-'use client'
-import React, { useState } from "react";
-
+"use client";
+import React from "react";
 
 const Icon = ({ open }) => {
   return (
@@ -9,8 +8,9 @@ const Icon = ({ open }) => {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={2}
-
-      className={`stroke-cmaccent ${open ? "rotate-180" : ""} h-6 w-6 transition-transform`}
+      className={`stroke-cmaccent ${
+        open ? "rotate-180" : ""
+      } h-6 w-6 transition-transform`}
     >
       <path
         strokeLinecap="round"
@@ -19,28 +19,21 @@ const Icon = ({ open }) => {
       />
     </svg>
   );
-}
+};
 
-
-export default function Accordion({ header, sub, body }) {
-  const [open, setOpen] = useState(false);
-
-  const handleToggle = () => {
-    setOpen(!open);
-    
-  };
-
-
+const Accordion = ({ header, sub, body, isOpen, onClick }) => {
   return (
     <div className="mb-4 rounded-lg shadow-md border border-cmdark/5 p-4">
       <div
-        className={`flex items-center justify-between cursor-pointer ${open ? "bg-cmdark/5 w-full p-2 rounded-md" : ""} transition-colors `}
-        onClick={handleToggle}
+        className={`flex items-center justify-between cursor-pointer ${
+          isOpen ? "bg-cmdark/5 w-full p-2 rounded-md" : ""
+        } transition-colors`}
+        onClick={onClick}
       >
         <h5 className={`text-h5`}>{header}</h5>
-        <Icon open={open} />
+        <Icon open={isOpen} />
       </div>
-      {open && (
+      {isOpen && (
         <div className="py-6 w-fit h-auto">
           <h5 className={`text-h5 font-medium`}>{sub}</h5>
           <p>{body}</p>
@@ -48,4 +41,6 @@ export default function Accordion({ header, sub, body }) {
       )}
     </div>
   );
-}
+};
+
+export default Accordion;

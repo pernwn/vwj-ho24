@@ -10,7 +10,7 @@ import { ReviewComp, reviews } from "../ui/reviews";
 
 const Para = ({ header, body }) => {
   return (
-    <div className={`${styles.flexCenter} text-center flex-col w-2/3 pb-8`}>
+    <div className={`${styles.flexCenter} text-center flex-col w-3/5 pb-8`}>
       <h2 className="text-h2 text-cmwhite">{header}</h2>
       <p className="text-p text-cmwhite/80">{body}</p>
     </div>
@@ -30,10 +30,22 @@ const Benefits = () => {
         />
         <div className="grid grid-cols-2 gap-x-4">
           {/* TODO: GRID */}
-          <SimpleCard content="Simple Line" action="Læs mere" />
-          <SimpleCard content="Simple Line" action="Læs mere" />
-          <SimpleCard content="Simple Line" action="Læs mere" />
-          <SimpleCard content="Simple Line" action="Læs mere" />
+          <SimpleCard
+            content="Oplev CyberMinds' specialisering inden for avanceret IT-sikkerhed og teknologiløsninger, der skræddersyes til dine behov."
+            action="Specialisering"
+          />
+          <SimpleCard
+            content="CyberMinds finder de bedste IT-talenter fra hele verden for at styrke din virksomheds digitale forsvar og innovation."
+            action="Talentsourcing"
+          />
+          <SimpleCard
+            content="Vi forstår vores kunders unikke behov og tilpasser vores løsninger til at imødekomme dem, hvilket skaber værdifulde partnerskaber."
+            action="Kundeindsigt"
+          />
+          <SimpleCard
+            content="Vores ekspertteam foretager nøje udvalgte match mellem teknologi og forretning, der sikrer smidige og effektive løsninger."
+            action="Effektive match"
+          />
         </div>
         <FilledBtn title="Book en samtale" />
       </div>

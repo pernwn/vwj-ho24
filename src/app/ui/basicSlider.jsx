@@ -25,7 +25,7 @@ const CyberPartners = () => {
   const duplicateSlides = [...partners, ...partners];
 
   return (
-    <div className="w-full h-1/4 overflow-x-auto flex flex-row no-scrollbar ">
+    <div className="w-screen h-16 overflow-hidden flex flex-row no-scrollbar bg-cmdark bg-opacity-35 bg-clip-padding backdrop-filter backdrop-blur-sm">
       <motion.div
         className="flex "
         animate={{
@@ -40,7 +40,7 @@ const CyberPartners = () => {
         {duplicateSlides.map((partner, index) => (
           <div
             key={index}
-            className="flex-shrink-0 flex items-center w-fit bg-cmdark bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blur-sm bg-origin-border "
+            className="flex-shrink-0 flex items-center "
             style={{ width: `${100 / partners.length}%` }}
           >
             <IconComponent icon={partner.icon} />

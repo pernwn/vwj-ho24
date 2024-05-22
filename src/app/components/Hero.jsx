@@ -19,7 +19,7 @@ export const Hero = () => {
       <div className="bg-cmdark/60 bg-clip-padding backdrop-filter backdrop-blur-xl">
         <div className={`${styles.padding} h-full w-full `}>
           <Header />
-          <div className={`w-1/2 pt-8 space-y-4 `}>
+          <div className={`w-full space-y-4 ${styles.paddingY}`}>
             <h1 className={`text-h1 text-cmwhite`}>
               Cybersikkerhed til <i>dine</i> behov
             </h1>
@@ -40,9 +40,8 @@ export const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="backdrop-blur-sm">
-          <CyberPartners />
-        </div>
+
+        <CyberPartners />
       </div>
     </section>
   );

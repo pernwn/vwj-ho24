@@ -1,14 +1,21 @@
-'use client'
+"use client";
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { Divider } from "@mui/material";
+import { CardMedia, Divider } from "@mui/material";
 import styles from "../style";
 import { Rating } from "./reviews";
 import Image from "next/legacy/image";
 
 import { motion } from "framer-motion";
 import { FilledBtn } from "./buttons";
+import {
+  Popover,
+  PopoverHandler,
+  PopoverContent,
+  Button,
+} from "@material-tailwind/react";
+
 export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
   return (
     <motion.div
@@ -48,22 +55,46 @@ export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
 
 export const SimpleCard = ({ content, action }) => {
   return (
-    <Card
-      className={`w-[275px] ${styles.flexCenter} flex-col rounded-lg p-8 mb-4 bg-cmsecondary/50`}
+    <Popover
+      animate={{
+        mount: { scale: 1, y: 0 },
+        unmount: { scale: 0, y: 25 },
+      }}
+
+      
     >
-      <h4 className="text-h5 text-cmwhite">{content}</h4>
+      <PopoverHandler>
+        <Card
+            className={`${styles.flexCenter} hover:cursor-pointer hover:bg-cmdark/25 transition ease flex-col rounded-lg p-8 mb-4 bg-blend-overlay bg-cmsecondary/55`}
+        >
+          <p className="text-h5 text-cmwhite text-xl">{action}</p>
+        </Card>
+      </PopoverHandler>
+      <PopoverContent className="bg-clip-padding bg-cmwhite/25 w-1/4 px-4 my-18 rounded-xl backdrop-filter backdrop-blur-lg border border-cmdark/5">
+        <p className="text-p w-1/2 text-cmwhite">{content}</p>
+      </PopoverContent>
+    </Popover>
+  );
+};
+
+export const VidCard = ({ title, content, btn, vid }) => {
+  return (
+    <Card
+      className={`max-w-md w-full h-full ${styles.flexCenter} m-4 mt-12 flex-col rounded-lg shadow-none bg-transparent`}
+    >
+      <CardMedia
+        component="video"
+        className="h-auto w-full rounded-lg shadow-sm"
+        controls
+      >
+        <source src={vid} type="video/mp4" />
+        Your browser does not support the video tag.
+      </CardMedia>
+      <CardContent className="flex flex-col justify-center items-center w-full space-y-2 py-8">
+        <h4 className="text-h4">{title}</h4>
+        <p className="text-p">{content}</p>
+      </CardContent>
     </Card>
   );
 };
 
-export const VidCard = ({title, content, btn}) => {
-  return (
-    <Card
-      className={`w-[275px] ${styles.flexCenter} flex-col rounded-lg p-8 mb-4 bg-cmsecondary/50`}
-    >
-      <h4 className="text-h5 text-cmwhite">{title}</h4>
-      <p className="text-p">{content}</p>
-      <FilledBtn title={btn}/>
-    </Card>
-  );
-}
