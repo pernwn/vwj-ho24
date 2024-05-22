@@ -7,7 +7,7 @@ import logoWhite from "@/app/assets/icons/logo-white.svg";
 import { Button } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
-//import {theme} from "/tailwind.config.js"
+
 
 const Header = () => {
 //TODO: lav hover states

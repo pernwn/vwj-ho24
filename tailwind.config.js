@@ -8,6 +8,7 @@ module.exports = {
   ],
 
   mode: "jit",
+  
   theme: {
     screens: {
       xs: "480px",
@@ -66,6 +67,8 @@ module.exports = {
           "100%": { transform: "translateX(-50%)" },
         },
       },
+
+      
     },
   },
   plugins: [],

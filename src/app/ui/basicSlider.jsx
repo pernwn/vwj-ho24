@@ -3,9 +3,24 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-//TODO: samarbejds partnere slider i hero
-const cmPartners = () => {
-  const duplicateSlides = [...reviews, ...reviews];
+import ScanGlobalIcon from "@/app/assets/icons/scanglobal.svg";
+import IncomIcon from "@/app/assets/icons/incommodities.svg";
+import IncubaIcon from "@/app/assets/icons/incuba.svg";
+import WristShipIcon from "@/app/assets/icons/wristship.svg";
+import ObtonIcon from "@/app/assets/icons/obton.svg";
+
+import Image from "next/image";
+
+const partners = [
+  { icon: ScanGlobalIcon },
+  { icon: IncomIcon },
+  { icon: IncubaIcon },
+  { icon: WristShipIcon },
+  { icon: ObtonIcon },
+];
+
+const CyberPartners = () => {
+  const duplicateSlides = [...partners, ...partners];
 
   return (
     <div
@@ -17,26 +32,28 @@ const cmPartners = () => {
           x: ["-100%", "0%"],
           transition: {
             ease: "linear",
-            duration: 200,
+            duration: 150,
             repeat: Infinity,
           },
         }}
       >
         {/* Render duplicated slides */}
-        {duplicateSlides.map((review, index) => (
+        {duplicateSlides.map((partner, index) => (
           <div
             key={index}
-            className="flex-shrink-0"
-            // style={{ width: `${100/reviews.length}%` }}
+            className="flex-shrink-0 flex items-center w-full p-4 bg-cmwhite bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blur-sm bg-origin-border"
+            style={{ width: `${100 / partners.length}%` }}
           >
-            <ReviewCard
-              key={review.id}
-              name={review.name}
-              occupation={review.occupation}
-              review={review.text}
-              stars={review.rating}
-              avatarImg={review.avatar}
-            />
+            <div className="mx-2 w-full text-cmaccent ">
+              <Image
+                src={partner.icon}
+                alt="Samarbejdspartnere"
+                width={100}
+                height={100}
+                className="fill-current"
+              />
+       
+            </div>
           </div>
         ))}
       </motion.div>
@@ -44,4 +61,4 @@ const cmPartners = () => {
   );
 };
 
-export default cmPartners;
+export default CyberPartners;

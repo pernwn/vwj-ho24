@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import { FilledBtn, IconBtn, OutlinedBtn } from "../ui/buttons";
 import styles from "../style";
 
+
 import Header from "./header";
 import { Button } from "@material-tailwind/react";
+import CyberPartners from "../ui/basicSlider";
+
 
 export const Hero = () => {
   const [isHovering, setIsHovering] = useState(false);
@@ -13,7 +16,7 @@ export const Hero = () => {
 
   return (
     <section
-      className={`bg-no-repeat bg-center bg-heroimg h-screen w-full bg-cover`}
+      className={`bg-no-repeat bg-center bg-heroimg h-full w-full bg-cover`}
     >
       <div
         className={`${styles.padding} h-full w-full bg-cmdark/60 bg-clip-padding backdrop-filter backdrop-blur-xl`}
@@ -39,9 +42,9 @@ export const Hero = () => {
             )}
           </Button>
         </div>
-
-        
+              <CyberPartners/>
       </div>
+
     </section>
   );
 };
