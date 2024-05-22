@@ -1,6 +1,10 @@
 "use client";
 
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleChevronLeft,
+  faCircleChevronRight,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import avatar1 from "../assets/backgrounds/avatar1.png";
 import avatar2 from "../assets/backgrounds/avatar2.png";
@@ -15,7 +19,6 @@ import avatar10 from "../assets/backgrounds/avatar10.png";
 import { ReviewCard } from "./cards";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Carousel } from "@material-tailwind/react";
 
 const reviews = [
   {
@@ -102,7 +105,7 @@ const reviews = [
 
 export const Rating = ({ rating }) => {
   return (
-    <div className="flex">
+    <div className="flex justify-between w-1/2">
       {[...Array(5)].map((_, i) => (
         <FontAwesomeIcon
           icon={faStar}
@@ -115,7 +118,7 @@ export const Rating = ({ rating }) => {
 };
 
 export const ReviewComp = () => {
-  const duplicateSlides = [...reviews, ...reviews]
+  const duplicateSlides = [...reviews, ...reviews];
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleNextSlide = () => {
@@ -130,18 +133,17 @@ export const ReviewComp = () => {
 
   return (
     <div className="relative overflow-hidden">
-      
-      <div className={`max-w-full h-auto flex flex-row pb-16 pt-12`}>
+      <div className={`max-w-full h-auto flex flex-row pb-28 pt-4`}>
         <motion.div
           className="flex"
           animate={{
-            x: `-${currentSlide * 8}%`,
+            x: `-${currentSlide * 4}%`,
           }}
           transition={{
             ease: "linear",
             duration: 0.4,
           }}
-          style={{ width: `${reviews.length * 200}%`}}
+          style={{ width: `${reviews.length * 100}%` }}
         >
           {duplicateSlides.map((review, index) => (
             <div
@@ -162,30 +164,33 @@ export const ReviewComp = () => {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center items-center space-x-2">
+        <motion.button whileTap={{ scale: 0.9 }}>
+          <FontAwesomeIcon
+            icon={faCircleChevronLeft}
+            size="2xl"
+            className="text-cmaccent px-4 hover:text-[#ED532D] hover:cursor-pointer hover:-translate-x-1 transition ease"
+            onClick={handlePrevSlide}
+          />
+        </motion.button>
         {reviews.map((_, index) => (
           <div
             key={index}
             className={`w-2 h-2 rounded-full cursor-pointer ${
-              index === currentSlide ? "bg-cmdark" : "bg-cmwhite/40"
+              index === currentSlide ? "bg-cmaccent" : "bg-cmsecondary/40"
             }`}
             onClick={() => setCurrentSlide(index)}
           ></div>
         ))}
+        <motion.button whileTap={{scale:0.9}}>
+          <FontAwesomeIcon
+            icon={faCircleChevronRight}
+            size="2xl"
+            className="text-cmaccent px-4 hover:text-[#ED532D] hover:cursor-pointer hover:translate-x-1 transition ease"
+            onClick={handleNextSlide}
+          />
+        </motion.button>
       </div>
-      <button
-        className="absolute top-1/2 transform -translate-y-1/2 left-4 bg-cmdark rounded-full w-8 h-8 text-cmwhite flex items-center justify-center"
-        onClick={handlePrevSlide}
-      >
-        {"<"}
-      </button>
-      <button
-        className="absolute top-1/2 transform -translate-y-1/2 right-4 bg-cmdark rounded-full w-8 h-8 text-cmwhite flex items-center justify-center"
-        onClick={handleNextSlide}
-      >
-        {">"}
-      </button>
     </div>
   );
 };
-

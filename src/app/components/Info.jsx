@@ -16,11 +16,10 @@ const ExplainerCard = () => {
       >
         <BackgroundCircles />
         <div
-          className={`${styles.padding} relative z-10 flex flex-col items-center justify-center w-fit h-auto bg-cmwhite/75 shadow-lg rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-75 border-1 border-cmwhite`}
+          className={`${styles.padding} relative z-10 flex flex-col items-center justify-center w-fit h-auto bg-cmwhite/75 shadow-lg rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-75 border border-cmdark/5`}
         >
           <div className="text-center space-x-4">
             <h2 className="text-h2">Din sikkerhed, vores ansvar</h2>
-            
           </div>
         </div>
       </Card>

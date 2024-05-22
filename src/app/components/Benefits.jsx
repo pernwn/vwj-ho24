@@ -20,18 +20,8 @@ const Para = ({ header, body }) => {
 const Benefits = () => {
   return (
     <section
-      className={`bg-cmprimary ${styles.paddingY} w-full rounded-tl-[12em] rounded-br-[12em]`}
+      className={`bg-cmprimary ${styles.paddingY} space-y-12 w-full h-full rounded-tl-[12em] rounded-br-[12em]`}
     >
-      {/* Testimonials / social proof */}
-      <div className={`flex-col ${styles.flexCenter} w-full pb-4 pt-8 h-auto`}>
-        <Para
-          header="Hvorfor vælge CyberMinds?"
-          body="Vi specialiserer os i at forbinde virksomheder med de bedste IT-sikkerhedsfreelancere, der imødekommer dine behov. Med vores omfattende netværk sikrer vi adgang til de mest kompetente eksperter."
-        />
-        {/* TODO: carousel with buttons and dots - possibly with smooth transition? */}
-        <ReviewComp/>
-      </div>
-
       {/* Services */}
       <div className={`flex-col ${styles.flexCenter} pb-8 pt-4 w-full h-auto`}>
         <Para
@@ -46,6 +36,16 @@ const Benefits = () => {
           <SimpleCard content="Simple Line" action="Læs mere" />
         </div>
         <FilledBtn title="Book en samtale" />
+      </div>
+
+      {/* Testimonials / social proof */}
+      <div className={`flex-col ${styles.flexCenter} w-full py-8 h-auto`}>
+        <Para
+          header="Hvorfor vælge CyberMinds?"
+          body="Vi specialiserer os i at forbinde virksomheder med de bedste IT-sikkerhedsfreelancere, der imødekommer dine behov. Med vores omfattende netværk sikrer vi adgang til de mest kompetente eksperter."
+        />
+        {/* TODO: carousel with buttons and dots - possibly with smooth transition? */}
+        <ReviewComp />
       </div>
     </section>
   );

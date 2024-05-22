@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import USP from "../ui/usp";
@@ -6,20 +6,23 @@ import styles from "../style";
 
 import { motion } from "framer-motion";
 import { FilledBtn } from "../ui/buttons";
-import { Card } from "@material-tailwind/react";
+import { Card, CardHeader } from "@material-tailwind/react";
 import Image from "next/image";
 
-
+  const circles = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0, transition: { duration: 2, yoyo: Infinity } },
+  };
 const CircleCard = () => {
   return (
-    <>
+    <section className="pb-28">
       <USP />
       <Card
-        className={`${styles.padding} bottom-10 relative flex items-center justify-center min-h-screen bg-transparent shadow-none`}
+        className={`${styles.padding} bottom-5 relative flex items-center justify-center min-h-screen bg-transparent shadow-none`}
       >
         <BackgroundCircles />
         <div
-          className={`${styles.padding} relative z-10 flex flex-col items-center justify-center w-[38rem] h-[38em] bg-cmwhite/75 shadow-lg rounded-full bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-75 border-1 border-cmdark/35`}
+          className={`${styles.padding} relative z-10 flex flex-col items-center justify-center w-[38rem] h-[38em] bg-cmwhite/75 shadow-lg rounded-full bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-75 border border-cmdark/5`}
         >
           <div className="text-center space-x-4">
             <h2 className="text-h2">Hvem er CyberMinds?</h2>
@@ -33,19 +36,40 @@ const CircleCard = () => {
           <FilledBtn title="Kontakt" />
         </div>
       </Card>
-    </>
+      <motion.div variants={circles} initial="initial" animate="animate">
+        <Card className="relative shadow-lg w-auto h-auto mx-48 grid grid-cols-2 gap-8 py-4 px-2 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5">
+          <CardHeader floated={false} className="w-full">
+            <Image
+              src="/bjarke-profil.jpg"
+              alt="Bjarke Petersen"
+              className="rounded-lg shadow-md"
+              layout="fill"
+              objectFit="cover"
+            />
+          </CardHeader>
+          <div className="p-4">
+            <h3 className="text-h3">Bjarke Petersen</h3>
+            <h6 className="text-h6">IT Security Entrepreneur</h6>
+            <p className="text-p leading-tight pt-4">
+              CyberMinds er hjemstedet for Danmarks bedste cybersec freelancere,
+              samt industriens go-to for cybersec ydelser.
+            </p>
+
+            <p className="text-p leading-tight pt-2">
+              Vi taler cybersec'sk, vi tager branchens laveste cut og vi kan
+              bedre end de fleste, hjælpe med at italesætte forretningsbehovet
+              og omsætte det til løsninger.
+            </p>
+          </div>
+        </Card>
+      </motion.div>
+    </section>
   );
 };
 
 const BackgroundCircles = () => {
-  const circles = {
-    initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0, transition: { duration: 2, yoyo: Infinity } },
-  };
-
   return (
     <div className="absolute inset-0 overflow-hidden">
-
       <motion.div
         className="w-[28em] h-[28em] border-[1.8rem] border-cmaccent rounded-full absolute"
         variants={circles}
@@ -55,11 +79,11 @@ const BackgroundCircles = () => {
       >
         <Image
           src="/roundbuilding.jpg"
-                    alt="Decorative Circle 3"
+          alt="Decorative Circle 3"
           layout="fill"
           objectFit="cover"
           className="rounded-full"
-       /> 
+        />
       </motion.div>
       <motion.div
         className="w-[18em] h-[18em] bg-cmaccent rounded-full absolute"
@@ -77,7 +101,7 @@ const BackgroundCircles = () => {
       />
     </div>
   );
-}
+};
 
 export default CircleCard;
 

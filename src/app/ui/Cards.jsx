@@ -18,20 +18,20 @@ export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
         zIndex: 1,
         transition: { duration: 0.4 },
       }}
-      className="p-4 min-w-[8 rem] mx-4 min-h-[25rem] space-x-4 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-4 border-cmsecondary"
+      className="p-2 min-w-[2rem] mx-4 min-h-[25rem] space-x-4 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-4 border-cmsecondary"
     >
       <CardContent>
-        <div className="flex flex-row pb-4 items-center h-full ">
-          <div className="w-1/3 rounded-full">
+        <div className="flex flex-row pb-4 items-end w-full h-full ">
+          <div className="w-[50%] rounded-full">
             <Image
               src={avatarImg}
               alt="Customer Img"
-              width={70}
-              height={70}
+              width={80}
+              height={80}
               className="rounded-full"
             />
           </div>
-          <div className="w-2/3 space-y-2">
+          <div className="w-[100%] space-y-2">
             <h5 className="text-h5 mt-3 font-semibold text-cmwhite">{name}</h5>
             <h6 className="text-h6 font-light text-cmwhite">{occupation}</h6>
             <Rating rating={stars} />
@@ -39,7 +39,6 @@ export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
         </div>
         <Divider className="bg-cmsecondary" />
         <div className="py-4 overflow-y-auto">
-          {" "}
           <p className="text-p text-pretty text-cmwhite font-300">{review}</p>
         </div>
       </CardContent>
