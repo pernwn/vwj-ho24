@@ -35,6 +35,7 @@ module.exports = {
         cmprimary: "#003cee",
         cmsecondary: "#86bae2",
         cmaccent: "#ff7857",
+        current:"currentColor",
       },
 
       fontSize: {

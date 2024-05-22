@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
+
 import React, { useState } from "react";
-import logoWhite from "@/app/assets/icons/logo-white.svg";
+import CyberMindsWhiteLogo from "@/app/assets/icons/logo-white.svg";
 
 import { Button } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,13 +17,10 @@ const Header = () => {
   // const notHovering = () => setIsHovering(false);
 
   return (
-    
     <div className={`flex flex-row justify-between`}>
-      <Image
-        src={logoWhite}
-        alt="CyberMinds Logo; Color White"
-        width={75}
-        height={75}
+      <CyberMindsWhiteLogo
+        className="w-75 h-75"
+        alt="CyberMinds Logo Color White"
       />
 
       <Button className=" translate-y-0 hover:-translate-y-1 active:-translate-y-2 cursor-pointer my-1 shadow-md  bg-cmaccent rounded-full border-solid border-cmaccent border-2 bg-clip-padding backdrop-filter backdrop-blur-sm hover:bg-cmprimary hover:bg-opacity-40 hover:border-cmprimary hover:text-cmwhite transition-all ease-in-out duration-300">

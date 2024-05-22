@@ -7,7 +7,7 @@ import styles from "../style";
 import { motion } from "framer-motion";
 import { FilledBtn } from "../ui/buttons";
 import { Card, CardHeader } from "@material-tailwind/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
   const circles = {
     initial: { opacity: 0, y: 50 },
@@ -36,8 +36,13 @@ const CircleCard = () => {
           <FilledBtn title="Kontakt" />
         </div>
       </Card>
-      <motion.div variants={circles} initial="initial" animate="animate">
-        <Card className="relative shadow-lg w-auto h-auto mx-48 grid grid-cols-2 gap-8 py-4 px-2 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5">
+      <motion.div
+        variants={circles}
+        initial="initial"
+        animate="animate"
+        className="flex justify-center"
+      >
+        <Card className="relative shadow-lg w-1/2 h-auto grid grid-cols-2 gap-8 py-4 px-2 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5">
           <CardHeader floated={false} className="w-full">
             <Image
               src="/bjarke-profil.jpg"

@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import { Divider } from "@mui/material";
 import styles from "../style";
 import { Rating } from "./reviews";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import { motion } from "framer-motion";
 import { FilledBtn } from "./buttons";

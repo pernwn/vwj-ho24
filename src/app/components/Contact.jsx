@@ -11,7 +11,7 @@ const Contact = () => {
     <section
       className={`${styles.padding} flex flex-row gap-16 bg-cmprimary ${styles.flexStart} rounded-bl-[12em] rounded-tr-[12em]`}
     >
-      <div className={`flex-col w-1/2 space-y-6 pl-8 py-16`}>
+      <div className={`flex-col w-1/2 space-y-6 pl-8 py-12`}>
         <h2 className="text-h2 text-cmwhite">
           Klar til at styrke din virksomheds IT-sikkerhed?
         </h2>

@@ -101,6 +101,7 @@ const reviews = [
     avatar: avatar10,
     rating: 3,
   },
+  
 ];
 
 export const Rating = ({ rating }) => {
@@ -137,7 +138,7 @@ export const ReviewComp = () => {
         <motion.div
           className="flex"
           animate={{
-            x: `-${currentSlide * 4}%`,
+            x: `-${currentSlide * 10}%`,
           }}
           transition={{
             ease: "linear",
@@ -168,8 +169,8 @@ export const ReviewComp = () => {
         <motion.button whileTap={{ scale: 0.9 }}>
           <FontAwesomeIcon
             icon={faCircleChevronLeft}
-            size="2xl"
-            className="text-cmaccent px-4 hover:text-[#ED532D] hover:cursor-pointer hover:-translate-x-1 transition ease"
+
+            className="w-[35pt] h-[35pt] text-cmaccent px-4 hover:text-[#ED532D] hover:cursor-pointer hover:-translate-x-1 transition ease"
             onClick={handlePrevSlide}
           />
         </motion.button>
@@ -185,8 +186,8 @@ export const ReviewComp = () => {
         <motion.button whileTap={{scale:0.9}}>
           <FontAwesomeIcon
             icon={faCircleChevronRight}
-            size="2xl"
-            className="text-cmaccent px-4 hover:text-[#ED532D] hover:cursor-pointer hover:translate-x-1 transition ease"
+
+            className="w-[35pt] h-[35pt] text-cmaccent px-4 hover:text-[#ED532D] hover:cursor-pointer hover:translate-x-1 transition ease"
             onClick={handleNextSlide}
           />
         </motion.button>

@@ -6,7 +6,7 @@ import { faBrain, faPeopleArrows, faShieldHalved } from "@fortawesome/free-solid
 
 const USP = () => {
   return (
-    <div className={`flex flex-row justify-around text-h4 py-28 text-cmaccent`}>
+    <div className={`flex flex-row justify-around text-h4 py-16 text-cmaccent`}>
       <div className="flex flex-col space-y-4">
         <FontAwesomeIcon icon={faShieldHalved} size="2xl"/>
         <h4 className="text-cmaccent">Nichespecialister</h4>

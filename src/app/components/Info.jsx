@@ -6,7 +6,7 @@ import styles from "../style";
 
 import { motion } from "framer-motion";
 import { Card } from "@material-tailwind/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ExplainerCard = () => {
   return (
