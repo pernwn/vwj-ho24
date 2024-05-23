@@ -9,9 +9,9 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Contact = () => {
   return (
     <section
-      className={`${styles.padding} flex flex-row gap-16 bg-cmprimary ${styles.flexStart} rounded-bl-[12em] rounded-tr-[12em]`}
+      className={`${styles.padding} xl:px-44 flex-row gap-16 bg-gradient-tr ${styles.flexStart} rounded-bl-[12em] rounded-tr-[12em]`}
     >
-      <div className={`flex-col w-1/2 space-y-6 pl-8 py-12`}>
+      <div className={`flex-col w-1/2 space-y-6 pl-8 py-12 xl:w-1/4`}>
         <h2 className="text-h2 text-cmwhite">
           Klar til at styrke din virksomheds IT-sikkerhed?
         </h2>
@@ -36,7 +36,7 @@ const Contact = () => {
           </h5>
         </div>
       </div>
-      <div className="pl-8 py-16">
+      <div className="pl-8 py-12">
         <FormComp />
       </div>
     </section>

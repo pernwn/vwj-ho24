@@ -23,19 +23,19 @@ const Icon = ({ open }) => {
 
 const Accordion = ({ header, sub, body, isOpen, onClick }) => {
   return (
-    <div className="mb-4 rounded-lg shadow-md border border-cmdark/5 p-4">
+    <div className="mb-4 rounded-lg shadow-md border border-cmdark/5 p-4 px-8">
       <div
         className={`flex items-center justify-between cursor-pointer ${
           isOpen ? "bg-cmdark/5 w-full p-2 rounded-md" : ""
         } transition-colors`}
         onClick={onClick}
       >
-        <h5 className={`text-h5`}>{header}</h5>
+        <h3 className="text-h5">{header}</h3>
         <Icon open={isOpen} />
       </div>
       {isOpen && (
         <div className="py-6 w-fit h-auto">
-          <h5 className={`text-h5 font-medium`}>{sub}</h5>
+          <h5 className={`text-h5 font-normal`}>{sub}</h5>
           <p>{body}</p>
         </div>
       )}

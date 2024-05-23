@@ -1,4 +1,5 @@
 
+
 import "./globals.css";
 
 
@@ -17,7 +18,10 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: "VWJ CyberMinds Revised",
+  title: {
+    template: "%s | CyberMinds",
+    default: "CyberMinds",
+  },
   description: "Victoria W Johansen - Multimediedesign, Hovedopgave 2024",
 };
 
@@ -25,10 +29,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="background--custom">
       <body
-        className={`${josefin_Sans.variable} mx-auto max-w-[1920px] overflow-x-hidden ${lato.variable} mx-auto max-w-[1920px] overflow-x-hidden`}
+        className={`${josefin_Sans.variable} ${lato.variable} mx-auto max-w-stretch overflow-x-hidden`}
       >
-        <main className="flex-grow h-screen">{children}</main>
-
+       
+          <main className="flex-grow h-screen">{children}</main>
+  
       </body>
     </html>
   );

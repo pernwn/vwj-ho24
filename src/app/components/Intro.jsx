@@ -6,8 +6,13 @@ import styles from "../style";
 
 import { motion } from "framer-motion";
 import { FilledBtn } from "../ui/buttons";
-import { Card, CardHeader } from "@material-tailwind/react";
-import Image from "next/legacy/image";
+import { Card, CardHeader, CardBody } from "@material-tailwind/react";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import { Button } from "@material-tailwind/react";
+
 
   const circles = {
     initial: { opacity: 0, y: 50 },
@@ -15,16 +20,16 @@ import Image from "next/legacy/image";
   };
 const CircleCard = () => {
   return (
-    <section className="pb-28">
+    <section className="pb-28 xl:pb-12">
       <USP />
       <Card
-        className={`${styles.padding} bottom-5 relative flex items-center justify-center min-h-screen bg-transparent shadow-none`}
+        className={`${styles.padding} bottom-4 xl:-bottom-4 relative flex items-center justify-center min-h-screen bg-transparent shadow-none`}
       >
         <BackgroundCircles />
         <div
-          className={`${styles.padding} relative z-10 flex flex-col items-center justify-center w-[38rem] h-[38em] bg-cmwhite/75 shadow-lg rounded-full bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-50 border border-cmdark/5`}
+          className={`${styles.padding} relative z-10 flex flex-col items-center justify-center w-[38em] h-[38em] xl:w-[56em] xl:h-[56em] bg-cmwhite/75 shadow-lg rounded-full bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-50 border border-cmdark/5`}
         >
-          <div className="text-center space-x-4">
+          <div className="text-center">
             <h2 className="text-h2">Hvem er CyberMinds?</h2>
             <h4 className="text-h4">Beskyt din virksomhed mod cybertrusler</h4>
             <p className="text-p p-4">
@@ -42,8 +47,8 @@ const CircleCard = () => {
         animate="animate"
         className="flex justify-center"
       >
-        <Card className="relative shadow-lg w-1/2 h-auto grid grid-cols-2 gap-8 py-4 px-2 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5">
-          <CardHeader floated={false} className="w-full">
+        <Card className="relative shadow-lg w-1/2 h-full xl:h-[30em] xl:w-1/4 xl:bottom-8 bottom-0 grid grid-cols-2 gap-4 p-4 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5">
+          <CardHeader floated={false}>
             <Image
               src="/bjarke-profil.jpg"
               alt="Bjarke Petersen"
@@ -52,20 +57,28 @@ const CircleCard = () => {
               objectFit="cover"
             />
           </CardHeader>
-          <div className="p-4">
+          <CardBody className="flex flex-col gap-2 py-8">
             <h3 className="text-h3">Bjarke Petersen</h3>
             <h6 className="text-h6">IT Security Entrepreneur</h6>
-            <p className="text-p leading-tight pt-4">
+            <p className="text-p leading-tight">
               CyberMinds er hjemstedet for Danmarks bedste cybersec freelancere,
               samt industriens go-to for cybersec ydelser.
             </p>
 
-            <p className="text-p leading-tight pt-2">
+            <p className="text-p leading-tight">
               Vi taler cybersec'sk, vi tager branchens laveste cut og vi kan
               bedre end de fleste, hjælpe med at italesætte forretningsbehovet
               og omsætte det til løsninger.
             </p>
-          </div>
+<Link href="https://www.linkedin.com/in/bjarke-n-petersen/">
+<Button size="sm" className="rounded-full w-full flex justify-center gap-2 mt-4 bg-clip-padding backdrop-filter backdrop-blur-sm text-cmwhite items-center bg-cmaccent border-cmaccent border-2 hover:bg-cmprimary/80 hover:border-cmprimary hover:cursor-pointer transition-color ease-linear  ">
+<FontAwesomeIcon icon={faLinkedin} size="2xl"/>
+<p className="text-md text-current normal-case">Skab forbindelse</p>
+</Button>  
+</Link>
+
+
+          </CardBody>
         </Card>
       </motion.div>
     </section>
@@ -76,11 +89,10 @@ const BackgroundCircles = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
       <motion.div
-        className="w-[28em] h-[28em] border-[1.8rem] border-cmaccent rounded-full absolute"
+        className="w-[28em] h-[28em] xl:w-[44em] xl:h-[44em] border-[1.8rem] border-cmaccent rounded-full absolute top-[2%] left-[8%] xl:left-[20%]"
         variants={circles}
         initial="initial"
         animate="animate"
-        style={{ top: "2%", left: "8%" }}
       >
         <Image
           src="/roundbuilding.jpg"
@@ -91,18 +103,16 @@ const BackgroundCircles = () => {
         />
       </motion.div>
       <motion.div
-        className="w-[18em] h-[18em] bg-cmaccent rounded-full absolute"
+        className="w-[18em] h-[18em] xl:w-[22em] xl:h-[22em] bg-cmaccent rounded-full absolute top-[50%] left-[22%] xl:left-[30%]"
         variants={circles}
         initial="initial"
         animate="animate"
-        style={{ top: "50%", left: "22%" }}
       />
       <motion.div
-        className="w-[24em] h-[24em] bg-cmprimary rounded-full absolute flex items-center justify-center"
+        className="w-[24em] h-[24em] xl:w-[34em] xl:h-[34em] bg-cmprimary rounded-full absolute top-[34%] right-[8%] xl:right-[26%]"
         variants={circles}
         initial="initial"
         animate="animate"
-        style={{ top: "34%", right: "8%" }}
       />
     </div>
   );
@@ -110,36 +120,3 @@ const BackgroundCircles = () => {
 
 export default CircleCard;
 
-// const Intro = () => {
-//   return (
-//     <section className="h-screen relative">
-//       <USP />
-//       <section
-//         className={`${styles.padding} ${styles.flexCenter} relative`}
-//       >
-//         <div
-//           className={`bg-cmwhite ${styles.flexCenter} absolute top-0 px-16 py-24 m-36 items-center text-center flex-col shadow-md border border-cmdark/5 rounded-full w-1/2`}
-//         >
-
-//             <h2 className="text-h2">Hvem er CyberMinds?</h2>
-//             <h4 className="text-h4">Beskyt din virksomhed mod cybertrusler</h4>
-//             <div className="flex flex-col items-center text-p">
-//               <p>
-//                 CyberMinds er din pålidelige partner i kampen mod digitale
-//                 angreb.
-//               </p>
-//               <p>
-//                 Vi tilbyder skræddersyede IT-sikkerhedstjenester, der beskytter
-//                 din virksomhed mod cyberkriminalitet og datasikkerhedsbrud.
-//               </p>
-//             </div>
-//             <FilledBtn title="Bliv kontaktet" />
-
-//         </div>
-//       </section>
-//       <CircleCard/>
-//     </section>
-//   );
-// };
-
-// export default Intro;

@@ -1,19 +1,20 @@
 "use client";
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import { CardMedia, Divider } from "@mui/material";
+
+import { Divider } from "@mui/material";
 import styles from "../style";
 import { Rating } from "./reviews";
 import Image from "next/legacy/image";
 
 import { motion } from "framer-motion";
-import { FilledBtn } from "./buttons";
+
 import {
   Popover,
   PopoverHandler,
   PopoverContent,
-  Button,
+  CardHeader,
+  CardBody,
+  Card,
 } from "@material-tailwind/react";
 
 export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
@@ -25,30 +26,30 @@ export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
         zIndex: 1,
         transition: { duration: 0.4 },
       }}
-      className="p-2 min-w-[2rem] mx-4 min-h-[25rem] space-x-4 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-4 border-cmsecondary"
+      className="p-8 max-w-sm mx-1 min-h-[25rem] space-x-4 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-15 border-4 border-cmsecondary"
     >
-      <CardContent>
-        <div className="flex flex-row pb-4 items-end w-full h-full ">
-          <div className="w-[50%] rounded-full">
+      <CardBody>
+        <div className="flex flex-row pb-4 w-full h-full space-x-4">
+          <div className="px-4 rounded-full">
             <Image
               src={avatarImg}
               alt="Customer Img"
-              width={80}
-              height={80}
+              width={150}
+              height={150}
               className="rounded-full"
             />
           </div>
-          <div className="w-[100%] space-y-2">
+          <div className="w-full space-y-2">
             <h5 className="text-h5 mt-3 font-semibold text-cmwhite">{name}</h5>
             <h6 className="text-h6 font-light text-cmwhite">{occupation}</h6>
             <Rating rating={stars} />
           </div>
         </div>
         <Divider className="bg-cmsecondary" />
-        <div className="py-4 overflow-y-auto">
+        <div className="p-4 overflow-y-auto">
           <p className="text-p text-pretty text-cmwhite font-300">{review}</p>
         </div>
-      </CardContent>
+      </CardBody>
     </motion.div>
   );
 };
@@ -60,41 +61,57 @@ export const SimpleCard = ({ content, action }) => {
         mount: { scale: 1, y: 0 },
         unmount: { scale: 0, y: 25 },
       }}
-
-      
     >
       <PopoverHandler>
-        <Card
-            className={`${styles.flexCenter} hover:cursor-pointer hover:bg-cmdark/25 transition ease flex-col rounded-lg p-8 mb-4 bg-blend-overlay bg-cmsecondary/35`}
+        <div
+          className={`${styles.flexCenter} w-full hover:cursor-pointer hover:bg-cmdark/35 transition ease flex-col rounded-lg p-8 mb-4 shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25`}
         >
-          <h5 className="text-h5 text-cmwhite text-xl">{action}</h5>
-        </Card>
+          <h5 className="text-[1.6rem] font-medium text-cmwhite">{action}</h5>
+        </div>
       </PopoverHandler>
-      <PopoverContent className="bg-clip-padding bg-cmwhite/25 w-1/4 px-4 my-18 rounded-xl backdrop-filter backdrop-blur-lg border border-cmdark/5">
-        <p className="text-p w-1/2 text-cmwhite">{content}</p>
+      <PopoverContent className="bg-clip-padding bg-cmwhite/45 w-1/4 p-4 rounded-xl backdrop-filter backdrop-blur-lg border border-cmdark/5">
+        <p className="text-[1.1rem] leading-tight w-full text-cmdark">
+          {content}
+        </p>
       </PopoverContent>
     </Popover>
   );
 };
 
-export const VidCard = ({ title, content, btn, vid }) => {
+
+export const ImgCard = ({ title, content, holderImg }) => {
   return (
     <Card
-      className={`max-w-md w-full h-full ${styles.flexCenter} m-4 mt-12 flex-col rounded-lg shadow-none bg-transparent`}
+      className={`${styles.flexCenter} m-4 flex-col rounded-lg xl:w-1/3 w-full h-full space-y-4 p-4 bg-cmwhite/80`}
     >
-      <CardMedia
-        component="video"
-        className="h-auto w-full rounded-lg shadow-sm"
-        controls
-      >
-        <source src={vid} type="video/mp4" />
-        Your browser does not support the video tag.
-      </CardMedia>
-      <CardContent className="flex flex-col justify-center items-center w-full space-y-2 py-8">
-        <h4 className="text-h4">{title}</h4>
+      <CardHeader className="h-1/2 w-full"><img src={holderImg} alt="Placeholder image"/></CardHeader>
+       
+      <CardBody className="flex flex-col justify-center items-center w-full h-1/2 space-y-2 py-4">
+        <h3 className="text-h5">{title}</h3>
         <p className="text-p">{content}</p>
-      </CardContent>
+      </CardBody>
     </Card>
   );
 };
 
+//NOTE - This component was intended to have a video as placeholder, but due to load time I decided to put a placerholder img instead (code right above)
+// export const VidCard = ({ title, content, vid }) => {
+//   return (
+//     <Card
+//       className={`${styles.flexStart} m-2 flex-col rounded-lg w-full h-full `}
+//     >
+//       <CardMedia
+//         component="video"
+//         className="h-1/2 w-fit rounded-lg shadow-sm"
+//         controls
+//       >
+//         <source src={vid} type="video/mp4" />
+//         Your browser does not support the video tag.
+//       </CardMedia>
+//       <CardBody className="flex flex-col justify-center items-center w-full h-1/2 space-y-2 py-8 bg-cmwhite/0">
+//         <h3 className="text-h5">{title}</h3>
+//         <p className="text-p">{content}</p>
+//       </CardBody>
+//     </Card>
+//   );
+// };

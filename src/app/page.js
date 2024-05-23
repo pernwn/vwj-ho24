@@ -1,5 +1,5 @@
 
-
+import ClientRender from "./components/clientrender";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
 import React from "react";
@@ -11,18 +11,33 @@ import Explainer from "./components/info";
 
 
 
-const page = () => {
+
+export default function Page() {
   return (
-    <main>
-      <Hero />
-      <Intro />
-      <Benefits />
-      <Explainer />
-      <Contact />
-      <Faq />
-      <Footer />
-    </main>
+    <ClientRender>
+      <main className="flex-grow">
+        <Hero />
+        <Intro />
+        <Benefits />
+        <Explainer />
+        <Contact />
+        <Faq />
+        <Footer />
+      </main>
+</ClientRender>
   );
 };
 
-export default page;
+
+// TODO:
+
+    
+    // <main>
+    //   <Hero />
+    //   <Intro />
+    //   <Benefits />
+    //   <Explainer />
+    //   <Contact />
+    //   <Faq />
+    //   <Footer />
+    // </main>

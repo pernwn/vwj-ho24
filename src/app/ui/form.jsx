@@ -1,16 +1,33 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Card, Button } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
-import { Checkbox, FormControlLabel } from "@mui/material";
+import { Checkbox, FormControlLabel, styled } from "@mui/material";
+import styles from '../style'
 
-// *NOTE - Originally I wanted the 'Submit' CTA to be disabled from the beginning, but I felt it defeated the purpose of the error messages. I've kept the code to handle the diabled button if it turns out the users prefer this instead.
-// In current version the button is not disabled
+
+import {
+  Card,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  Button,
+} from "@material-tailwind/react";
+
+const CustomCheckbox = styled(Checkbox)(({ error }) => ({
+  color: error ? "#DE1704" : "#86bae2",
+  "&.Mui-checked": {
+    color: error ? "#DE1704" : "#86bae2",
+  },
+}));
 
 export default function FormComp() {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(!open);
+
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [formValues, setFormValues] = useState({
     firstName: "",
@@ -30,9 +47,7 @@ export default function FormComp() {
 
   const handleChange = (e) => {
     const { id, value, type, checked } = e.target;
-    console.log("Checkbox clicked. Checked status:", checked);
     const newValue = type === "checkbox" ? checked : value;
-    console.log("New value:", newValue);
     setFormValues((prevValues) => ({ ...prevValues, [id]: newValue }));
     if (newValue) {
       setErrors((prevErrors) => ({ ...prevErrors, [id]: false }));
@@ -40,7 +55,6 @@ export default function FormComp() {
         setErrors((prevErrors) => ({ ...prevErrors, contactFormat: false }));
       }
     }
-    console.log("success")
   };
 
   const validateEmail = (email) => {
@@ -60,18 +74,12 @@ export default function FormComp() {
     };
     setErrors(newErrors);
 
-    // Submit ONLY IF all fields are filled and email is valid
     if (
       !Object.values(newErrors).some((error) => error) &&
       validateEmail(formValues.contact)
     ) {
-      console.log("Form submitted successfully");
+      setOpen(true);
     }
-
-    //Code for handling disabled button function
-    // ---if (!newErrors.contactFormat && !Object.values(newErrors).filter(error => error && error !== 'contactFormat').length === 0) {
-    //   console.log("Form submitted successfully");
-    // }
   };
 
   useEffect(() => {
@@ -82,8 +90,9 @@ export default function FormComp() {
   }, [formValues]);
 
   return (
+
     <Card shadow={false} className="bg-transparent text-cmwhite">
-      <form className="w-full max-w-lg" onSubmit={handleSubmit}>
+      <form className="w-full max-w-xl xl:w-full " onSubmit={handleSubmit}>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
@@ -94,7 +103,7 @@ export default function FormComp() {
             </label>
             <input
               className={`appearance-none block w-full placeholder-cmwhite/70 bg-cmsecondary/15 border-2 rounded py-3 px-4 leading-tight focus:outline-none ${
-                errors.firstName ? "border-[#FFFF00]" : "border-cmsecondary/45"
+                errors.firstName ? "border-[#DE1704]" : "border-cmsecondary/45"
               } focus:bg-cmsecondary/15 focus:border-cmsecondary`}
               id="firstName"
               type="text"
@@ -103,7 +112,7 @@ export default function FormComp() {
               onChange={handleChange}
             />
             {errors.firstName && (
-              <p className="text-[#FFFF00] text-xs italic pt-2">
+              <p className="text-[#DE1704] text-xs italic pt-2">
                 <FontAwesomeIcon
                   icon={faTriangleExclamation}
                   className="pr-2"
@@ -121,7 +130,7 @@ export default function FormComp() {
             </label>
             <input
               className={`appearance-none placeholder-cmwhite/70 block w-full bg-cmsecondary/15 border-2 rounded py-3 px-4 leading-tight focus:outline-none ${
-                errors.lastName ? "border-[#FFFF00]" : "border-cmsecondary/45"
+                errors.lastName ? "border-[#DE1704]" : "border-cmsecondary/45"
               } focus:bg-cmsecondary/15 focus:border-cmsecondary`}
               id="lastName"
               type="text"
@@ -130,7 +139,7 @@ export default function FormComp() {
               onChange={handleChange}
             />
             {errors.lastName && (
-              <p className="text-[#FFFF00] text-xs italic pt-2">
+              <p className="text-[#DE1704] text-xs italic pt-2">
                 <FontAwesomeIcon
                   icon={faTriangleExclamation}
                   className="pr-2"
@@ -151,7 +160,7 @@ export default function FormComp() {
             <input
               className={`appearance-none placeholder-cmwhite/70 block w-full bg-cmsecondary/15 border-2 rounded py-3 px-4 leading-tight focus:outline-none ${
                 errors.contact || errors.contactFormat
-                  ? "border-[#FFFF00]"
+                  ? "border-[#DE1704]"
                   : "border-cmsecondary/45"
               } focus:bg-cmsecondary/15 focus:border-cmsecondary`}
               id="contact"
@@ -161,7 +170,7 @@ export default function FormComp() {
               onChange={handleChange}
             />
             {errors.contact && !errors.contactFormat && (
-              <p className="text-[#FFFF00] text-xs italic pt-2">
+              <p className="text-[#DE1704] text-xs italic pt-2">
                 <FontAwesomeIcon
                   icon={faTriangleExclamation}
                   className="pr-2"
@@ -170,7 +179,7 @@ export default function FormComp() {
               </p>
             )}
             {errors.contactFormat && (
-              <p className="text-[#FFFF00] text-xs italic pt-2">
+              <p className="text-[#DE1704] text-xs italic pt-2">
                 <FontAwesomeIcon
                   icon={faTriangleExclamation}
                   className="pr-2"
@@ -190,7 +199,7 @@ export default function FormComp() {
             </label>
             <textarea
               className={`appearance-none placeholder-cmwhite/70 block w-full bg-cmsecondary/15 text-cmwhite border-2 rounded pt-3 pb-28 px-4 leading-tight focus:outline-none ${
-                errors.message ? "border-[#FFFF00]" : "border-cmsecondary/45"
+                errors.message ? "border-[#DE1704]" : "border-cmsecondary/45"
               } focus:bg-cmsecondary/15 focus:border-cmsecondary`}
               id="message"
               type="textarea"
@@ -199,7 +208,7 @@ export default function FormComp() {
               onChange={handleChange}
             />
             {errors.message && (
-              <p className="text-[#FFFF00] text-xs italic pt-2">
+              <p className="text-[#DE1704] text-xs italic pt-2">
                 <FontAwesomeIcon
                   icon={faTriangleExclamation}
                   className="pr-2"
@@ -213,10 +222,7 @@ export default function FormComp() {
               <FormControlLabel
                 htmlFor="check"
                 control={
-                  <Checkbox
-                    className={`${
-                      errors.check ? "text-[#FFFF00]" : "text-cmsecondary/50"
-                    }`}
+                  <CustomCheckbox
                     id="check"
                     type="checkbox"
                     checked={formValues.check}
@@ -233,28 +239,9 @@ export default function FormComp() {
                 }
                 labelPlacement="end"
               />
-              {/* <Checkbox 
-                defaultChecked
-                color="yellow"
-                type="checkbox"
-                id="check"
-                value={formValues.check}
-                onChange={handleChange}
-                className={`${
-                  errors.check ? "border-[#FFFF00]" : "border-cmsecondary"
-                }`}
-                containerProps={{
-                  className: "mt-2.5",
-                }}
-              />
-              <label htmlFor="check" className="text-cmwhite/50 text-xs">
-                Jeg giver samtykke til at CyberMinds må kontakte mig med
-                information vedr. min forespørgsel. Jeg kan enhver tid
-                tilbagekalde mit samtykke.
-              </label> */}
             </div>
             {errors.check && (
-              <p className="text-[#FFFF00] text-xs italic pt-2">
+              <p className="text-[#DE1704] text-xs italic pt-2">
                 <FontAwesomeIcon
                   icon={faTriangleExclamation}
                   className="pr-2"
@@ -269,16 +256,45 @@ export default function FormComp() {
           <Button
             type="submit"
             variant="filled"
-            className={`enabled:bg-cmaccent enabled:text-cmprimary uppercase w-full p-3 text-md font-medium transition-colors ease-in enabled:hover:bg-[#ED532D] enabled:hover:cursor-pointer ${
+            className={`enabled:bg-cmaccent enabled:text-cmprimary uppercase w-full p-3 text-md font-medium transition-colors ease-in enabled:hover:bg-[#ff3300] enabled:hover:cursor-pointer ${
               isButtonDisabled ? "bg-cmdark/40 text-cmwhite/40" : ""
             }`}
-            //code for handling disabled button mode
-            //---disabled={isButtonDisabled}
+            // code for handling disabled button mode
+            // ---disabled={isButtonDisabled}
           >
-            start dialogen
+            <p>start dialogen</p>
           </Button>
         </div>
       </form>
-    </Card>
+
+      {/* Dialog Component */}
+      <div className={`w-fit h-fit ${styles.padding} ${styles.flexCenter}`}>
+        <Dialog
+          className="bg-cmwhite/80 text-center h-fit w-fit mx-[35vw] my-[25vh] p-8 flex flex-col items-center justify-center"
+          open={open}
+          handler={handleOpen}
+          animate={{
+            mount: { scale: 1, y: 0 },
+            unmount: { scale: 0.9, y: -100 },
+          }}
+        >
+          <h3 className="text-h3">Din henvendelse er modtaget!</h3>
+          <p className="text-p">
+            Vi stræber efter at vende tilbage med et svar hurtigts
+          </p>
+          <DialogFooter>
+
+            <Button
+              variant="gradient"
+              onClick={handleOpen}
+              className="text-p text-cmwhite bg-cmprimary hover:bg-[#001966] transition ease-linear duration-300"
+            >
+              <span>OK</span>
+            </Button>
+          </DialogFooter>
+        </Dialog>
+      </div>
+      </Card>
+
   );
 }

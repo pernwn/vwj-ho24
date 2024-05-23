@@ -14,12 +14,12 @@ export const Hero = () => {
 
   return (
     <section
-      className={`bg-no-repeat bg-center bg-heroimg h-fit w-full bg-cover`}
+      className={`bg-no-repeat bg-center bg-heroimg h-full w-full bg-cover`}
     >
       <div className="bg-cmdark/60 bg-clip-padding backdrop-filter backdrop-blur-xl">
         <div className={`${styles.padding} h-full w-full `}>
           <Header />
-          <div className={`w-full space-y-4 ${styles.paddingY}`}>
+          <div className={`w-3/4 xl:w-2/3 space-y-4 ${styles.padding} xl:px-64`}>
             <h1 className={`text-h1 text-cmwhite`}>
               Cybersikkerhed til <i>dine</i> behov
             </h1>
@@ -30,7 +30,7 @@ export const Hero = () => {
             <Button
               onMouseEnter={hovering}
               onMouseLeave={notHovering}
-              className={`flex items-center translate-y-4 hover:bg-cmprimary/20 hover:translate-y-3 rounded-full border-2 border-cmprimary font-normal hover:font-medium cursor-pointer py-4 px-8 bg-cmprimary active:translate-y-2 transition-all duration-300 ease-out transform`}
+              className={`flex items-center translate-y-4 hover:bg-cmprimary/20 hover:translate-y-3 rounded-full border-2 border-cmprimary hover:font-medium cursor-pointer py-4 px-8 bg-cmprimary active:translate-y-2 transition-all duration-300 ease-out transform`}
             >
               {isHovering ? (
                 <p className="text-cmwhite text-p">Få uforpligtende tilbud</p>

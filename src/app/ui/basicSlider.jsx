@@ -18,14 +18,14 @@ const partners = [
 ];
 
 const IconComponent = ({ icon: Icon }) => {
-  return <Icon className="w-32 h-32 text-cmprimary mix-blend-hard-light fill-current" />;
+  return <Icon className="w-32 h-32 text-cmprimary mix-blend-hard-light fill-current p-2" />;
 };
 
 const CyberPartners = () => {
-  const duplicateSlides = [...partners, ...partners];
+  const duplicateSlides = [...partners, ...partners, ...partners];
 
   return (
-    <div className="w-screen h-16 overflow-hidden flex flex-row no-scrollbar bg-cmdark bg-opacity-35 bg-clip-padding backdrop-filter backdrop-blur-sm">
+    <div className="w-full h-16 overflow-hidden relative flex flex-row no-scrollbar bg-cmdark bg-opacity-35 bg-clip-padding backdrop-filter backdrop-blur-sm">
       <motion.div
         className="flex "
         animate={{
@@ -41,7 +41,7 @@ const CyberPartners = () => {
           <div
             key={index}
             className="flex-shrink-0 flex items-center "
-            style={{ width: `${100 / partners.length}%` }}
+            style={{ width: `${80 / partners.length}%` }}
           >
             <IconComponent icon={partner.icon} />
           </div>

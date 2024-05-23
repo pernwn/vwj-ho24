@@ -1,7 +1,8 @@
+'use client'
+
 import React from "react";
 import styles from "../style";
-import ReviewSlider from "../ui/basicSlider";
-import { ReviewCard, SimpleCard } from "../ui/cards";
+import { SimpleCard } from "../ui/cards";
 import { FilledBtn } from "../ui/buttons";
 import { ReviewComp, reviews } from "../ui/reviews";
 
@@ -20,7 +21,7 @@ const Para = ({ header, body }) => {
 const Benefits = () => {
   return (
     <section
-      className={`bg-cmprimary ${styles.paddingY} space-y-12 w-full h-full rounded-tl-[12em] rounded-br-[12em]`}
+      className={`bg-gradient-bl ${styles.padding} space-y-12 xl:space-y-28 w-full h-full rounded-tl-[12em] rounded-br-[12em]`}
     >
       {/* Services */}
       <div className={`flex-col ${styles.flexCenter} pb-8 pt-4 w-full h-auto`}>
@@ -28,8 +29,7 @@ const Benefits = () => {
           header="Skræddersyet IT-sikkerhedseksperthjælp"
           body="Vi specialiserer os i at forbinde virksomheder med de bedste IT-sikkerhedsfreelancere, der imødekommer dine behov. Med vores omfattende netværk sikrer vi adgang til de mest kompetente eksperter."
         />
-        <div className="grid grid-cols-2 gap-x-4">
-          {/* TODO: GRID */}
+        <div className="grid grid-cols-2 gap-x-4 w-3/4 xl:w-2/4">
           <SimpleCard
             content="Oplev CyberMinds' specialisering inden for avanceret IT-sikkerhed og teknologiløsninger, der skræddersyes til dine behov."
             action="Specialisering"
@@ -50,13 +50,13 @@ const Benefits = () => {
         <FilledBtn title="Book en samtale" />
       </div>
 
+    
       {/* Testimonials / social proof */}
       <div className={`flex-col ${styles.flexCenter} w-full py-8 h-auto`}>
         <Para
           header="Hvorfor vælge CyberMinds?"
           body="Vi specialiserer os i at forbinde virksomheder med de bedste IT-sikkerhedsfreelancere, der imødekommer dine behov. Med vores omfattende netværk sikrer vi adgang til de mest kompetente eksperter."
         />
-        {/* TODO: carousel with buttons and dots - possibly with smooth transition? */}
         <ReviewComp />
       </div>
     </section>

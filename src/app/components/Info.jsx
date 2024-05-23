@@ -1,48 +1,46 @@
 "use client";
-
 import React from "react";
 import styles from "../style";
-
 import { motion } from "framer-motion";
 import Image from "next/legacy/image";
-import { VidCard } from "../ui/cards";
-import { Card, CardContent } from "@mui/material";
+import { ImgCard } from "../ui/cards";
+
+import {
+  CardBody,
+  Card,
+} from "@material-tailwind/react";
 
 const ExplainerCard = () => {
   return (
-    <section
-      className={`w-screen h-screen relative ${styles.flexCenter} my-16`}
-    >
+    <section className={`${styles.flexCenter} relative my-12`}>
       <BackgroundCircles />
       <Card
-        className={`${styles.flexCenter} w-4/5 relative h-full overflow-hidden shadow-lg bg-clip-padding bg-cmwhite rounded-xl backdrop-filter backdrop-blur-lg bg-opacity-75 border border-cmdark/5`}
+      sx={{}}
+        className={`${styles.flexCenter} ${styles.paddingY} overflow-hidden w-4/5 xl:w-2/5 relative rounded-2xl shadow-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-75 border border-cmdark/5 bg-cmwhite`}
       >
-        <CardContent
-          className={`absolute z-10 flex flex-row items-center justify-center w-fit h-fit bg-transparent shadow-none`}
-        >
-          <div className="text-center w-full flex flex-col items-center justify-center px-44 ">
+        <CardBody className="flex flex-row items-center justify-center w-fit h-fit">
+          <div className="text-center w-full flex flex-col items-center justify-center px-28 xl:px-8">
             <h2 className="text-h2">Din sikkerhed, vores ansvar</h2>
-            <p className="text-p mx-12">
-              Få et indblik i, hvordan vi prioriterer <b>kvalitet</b>,
-              <b> pålidelighed</b> og <b>effektivitet</b> i alle vores
+            <p className="text-p mx-12 xl:mx-80">
+              Få et indblik i, hvordan vi prioriterer <b>kvalitet</b>,{" "}
+              <b>pålidelighed</b> og <b>effektivitet</b> i alle vores
               handlinger. Se her, hvordan vores dedikation til disse værdier
               former hver interaktion og beslutning, vi træffer.
             </p>
-
-            <div className="flex flex-col w-full lg:flex-row justify-center ">
-              <VidCard
+            <div className="flex flex-col w-full h-full lg:flex-row justify-center">
+              <ImgCard
                 title="Beskyttelsestiltag"
                 content="CyberMinds beskytter din virksomhed mod cybertrusler. Vores eksperter overvåger og reagerer på sikkerhedsrisici døgnet rundt for at sikre dine data og forretningskontinuitet. Se hvordan vi gør det i denne video."
-                vid="https://videos.pexels.com/video-files/7579657/7579657-uhd_4096_2160_25fps.mp4"
+                holderImg="/placeholder1.jpg"
               />
-              <VidCard
+              <ImgCard
                 title="Avanceret Cybersecurity"
                 content="CyberMinds tilbyder skræddersyede løsninger til at beskytte dine digitale aktiver. Med avanceret teknologi og dybdegående analyser, sikrer vi, at din virksomhed er rustet til at modstå de mest sofistikerede cyberangreb."
-                vid="https://videos.pexels.com/video-files/7255101/7255101-uhd_4096_2160_30fps.mp4"
+                holderImg="/placeholder2.png"
               />
             </div>
           </div>
-        </CardContent>
+        </CardBody>
       </Card>
     </section>
   );
@@ -55,13 +53,13 @@ const BackgroundCircles = () => {
   };
 
   return (
-    <div className="absolute inset-0 ">
+    <div className="absolute inset-0">
       <motion.div
-        className="w-[48em] h-[48em] border-[1.8rem] border-cmaccent rounded-full absolute"
+        className="w-[48em] h-[48em] border-[1.8rem] border-cmaccent rounded-full absolute top-[4%] left-[-18%] xl:left-[12%]"
         variants={circles}
         initial="initial"
         animate="animate"
-        style={{ top: "4%", left: "-18%" }}
+
       >
         <Image
           src="/developer.png"
@@ -72,18 +70,16 @@ const BackgroundCircles = () => {
         />
       </motion.div>
       <motion.div
-        className="w-[12em] h-[12em] bg-cmaccent rounded-full absolute"
+        className="w-[12em] h-[12em] bg-cmaccent rounded-full absolute top-[12%] right-[4%] xl:right-[20%]"
         variants={circles}
         initial="initial"
         animate="animate"
-        style={{ top: "12%", right: "4%" }}
       />
       <motion.div
-        className="w-[24em] h-[24em] bg-cmprimary rounded-full absolute flex items-center justify-center"
+        className="w-[24em] h-[24em] bg-cmprimary rounded-full absolute flex items-center justify-center top-[14%] right-[4%] xl:right-[22%]"
         variants={circles}
         initial="initial"
         animate="animate"
-        style={{ top: "14%", right: "4%" }}
       />
     </div>
   );
