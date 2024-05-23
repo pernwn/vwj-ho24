@@ -65,9 +65,9 @@ export const SimpleCard = ({ content, action }) => {
     >
       <PopoverHandler>
         <Card
-            className={`${styles.flexCenter} hover:cursor-pointer hover:bg-cmdark/25 transition ease flex-col rounded-lg p-8 mb-4 bg-blend-overlay bg-cmsecondary/55`}
+            className={`${styles.flexCenter} hover:cursor-pointer hover:bg-cmdark/25 transition ease flex-col rounded-lg p-8 mb-4 bg-blend-overlay bg-cmsecondary/35`}
         >
-          <p className="text-h5 text-cmwhite text-xl">{action}</p>
+          <h5 className="text-h5 text-cmwhite text-xl">{action}</h5>
         </Card>
       </PopoverHandler>
       <PopoverContent className="bg-clip-padding bg-cmwhite/25 w-1/4 px-4 my-18 rounded-xl backdrop-filter backdrop-blur-lg border border-cmdark/5">

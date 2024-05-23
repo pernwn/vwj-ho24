@@ -11,16 +11,16 @@ import { Card, CardContent } from "@mui/material";
 const ExplainerCard = () => {
   return (
     <section
-      className={`w-screen h-screen relative ${styles.flexCenter} my-28`}
+      className={`w-screen h-screen relative ${styles.flexCenter} my-16`}
     >
       <BackgroundCircles />
       <Card
-        className={`${styles.flexCenter} mx-44 w-full relative h-full overflow-hidden shadow-lg bg-clip-padding bg-cmwhite rounded-xl backdrop-filter backdrop-blur-lg bg-opacity-75 border border-cmdark/5`}
+        className={`${styles.flexCenter} w-4/5 relative h-full overflow-hidden shadow-lg bg-clip-padding bg-cmwhite rounded-xl backdrop-filter backdrop-blur-lg bg-opacity-75 border border-cmdark/5`}
       >
         <CardContent
           className={`absolute z-10 flex flex-row items-center justify-center w-fit h-fit bg-transparent shadow-none`}
         >
-          <div className="text-center w-4/5 flex flex-col items-center justify-center">
+          <div className="text-center w-full flex flex-col items-center justify-center px-44 ">
             <h2 className="text-h2">Din sikkerhed, vores ansvar</h2>
             <p className="text-p mx-12">
               Få et indblik i, hvordan vi prioriterer <b>kvalitet</b>,
