@@ -3,6 +3,13 @@ import { HeroSkeleton, IntroSkeleton } from '../ui/skeleton';
 import styles from '../style';
 import Hero from '../components/hero';
 import Intro from "./components/intro";
+import { Metadata } from 'next';
+
+
+export const metadata = (Metadata) = {
+  title: "Loading...",
+};
+
 export default async function Page() {
   return (
     <main className={`${styles.padding}`}>

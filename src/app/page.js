@@ -10,8 +10,6 @@ import Benefits from "./components/benefits";
 import Explainer from "./components/info";
 
 
-
-
 export default function Page() {
   return (
     <ClientRender>
@@ -28,16 +26,3 @@ export default function Page() {
   );
 };
 
-
-// TODO:
-
-    
-    // <main>
-    //   <Hero />
-    //   <Intro />
-    //   <Benefits />
-    //   <Explainer />
-    //   <Contact />
-    //   <Faq />
-    //   <Footer />
-    // </main>

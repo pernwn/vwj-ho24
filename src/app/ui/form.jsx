@@ -90,7 +90,6 @@ export default function FormComp() {
   }, [formValues]);
 
   return (
-
     <Card shadow={false} className="bg-transparent text-cmwhite">
       <form className="w-full max-w-xl xl:w-full " onSubmit={handleSubmit}>
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -270,7 +269,7 @@ export default function FormComp() {
       {/* Dialog Component */}
       <div className={`w-fit h-fit ${styles.padding} ${styles.flexCenter}`}>
         <Dialog
-          className="bg-cmwhite/80 text-center h-fit w-fit mx-[35vw] my-[25vh] p-8 flex flex-col items-center justify-center"
+          className="bg-cmwhite/80 text-center h-fit w-fit mx-[35vw] my-[25vh] px-12 py-8 gap-2 flex flex-col items-center justify-center"
           open={open}
           handler={handleOpen}
           animate={{
@@ -278,12 +277,19 @@ export default function FormComp() {
             unmount: { scale: 0.9, y: -100 },
           }}
         >
-          <h3 className="text-h3">Din henvendelse er modtaget!</h3>
-          <p className="text-p">
-            Vi stræber efter at vende tilbage med et svar hurtigts
-          </p>
-          <DialogFooter>
+          <h3 className="text-h3">Tak for din henvendelse</h3>
+          <div className="space-y-2">
+            <p className="text-p">
+              Vi har modtaget din besked og arbejder på at svare dig så hurtigt
+              som muligt.
+            </p>
+            <p className="text-p">
+              Hvis du har yderligere spørgsmål eller bekymringer,
+              tøv ikke med at kontakte os igen. Vi er her for at hjælpe dig.
+            </p>
+          </div>
 
+          <DialogFooter>
             <Button
               variant="gradient"
               onClick={handleOpen}
@@ -294,7 +300,6 @@ export default function FormComp() {
           </DialogFooter>
         </Dialog>
       </div>
-      </Card>
-
+    </Card>
   );
 }

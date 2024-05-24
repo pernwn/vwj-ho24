@@ -1,8 +1,7 @@
 
 
 import "./globals.css";
-
-
+import { Metadata } from "next";
 import { Josefin_Sans, Lato } from 'next/font/google';
 
 const josefin_Sans = Josefin_Sans({
@@ -17,7 +16,7 @@ const lato = Lato({
   variable:"--font-lato"
 });
 
-export const metadata = {
+export const metadata = (Metadata) = {
   title: {
     template: "%s | CyberMinds",
     default: "CyberMinds",
@@ -29,11 +28,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="background--custom">
       <body
-        className={`${josefin_Sans.variable} ${lato.variable} mx-auto max-w-stretch overflow-x-hidden`}
+        className={`${josefin_Sans.variable} ${lato.variable} antialiased mx-auto max-w-stretch overflow-x-hidden`}
       >
-       
-          <main className="flex-grow h-screen">{children}</main>
-  
+        <main className="flex-grow h-screen">{children}</main>
       </body>
     </html>
   );
