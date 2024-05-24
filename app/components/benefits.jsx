@@ -3,7 +3,7 @@
 import { SimpleCard } from "../ui/cards";
 import React from "react";
 import styles from "../style";
-import { FilledBtn } from '../../src/app/ui/buttons';
+import { FilledBtn } from "../ui/buttons";
 import { ReviewComp } from "../ui/reviews";
 
 

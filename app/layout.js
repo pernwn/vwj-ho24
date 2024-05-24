@@ -1,6 +1,6 @@
 
 
-import "./globals.css";
+import '@/app/globals.css'
 import { Josefin_Sans, Lato } from 'next/font/google';
 
 const josefin_Sans = Josefin_Sans({

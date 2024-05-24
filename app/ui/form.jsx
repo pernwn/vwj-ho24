@@ -5,14 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 import { Checkbox, FormControlLabel, styled } from "@mui/material";
-import styles from '../style'
+import styles from "../style";
 
 
 import {
   Card,
   Dialog,
-  DialogHeader,
-  DialogBody,
   DialogFooter,
   Button,
 } from "@material-tailwind/react";

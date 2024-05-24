@@ -1,15 +1,12 @@
 
-
-
-
-import Benefits from '@/components/benefits';
-import ClientRender from '@/components/clientrender';
-import Contact from '@/components/contact';
-import Faq from '@/components/faq';
-import Footer from '@/components/footer';
-import Hero from '@/components/hero';
-import ExplainerCard from '@/components/info';
-import CircleCard from '@/components/intro';
+import ClientRender from './components/clientrender';
+import Hero from './components/hero';
+import CircleCard from './components/intro';
+import Benefits from './components/benefits';
+import ExplainerCard from './components/info';
+import Contact from './components/contact';
+import Faq from './components/faq';
+import Footer from './components/footer';
 
 
 export default function Page() {
