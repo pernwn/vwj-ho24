@@ -1,10 +1,31 @@
 import globals from "globals";
-import pluginJs from "@eslint/js";
-import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
+import pluginJs from "@eslint/eslint-plugin";
+import pluginReactConfig from "eslint-plugin-react";
 
-
-export default [
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
-  pluginReactConfig,
-];
+export default {
+  overrides: [
+    {
+      files: ["*.js"],
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: globals.browser,
+      plugins: ["@eslint/eslint-plugin"],
+      extends: ["plugin:@eslint/eslint-plugin/recommended"],
+    },
+    {
+      files: ["*.jsx"],
+      parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      plugins: ["react"],
+      extends: ["plugin:react/recommended"],
+    },
+  ],
+};
