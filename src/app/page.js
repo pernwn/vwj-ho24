@@ -3,6 +3,7 @@
 
 
 import Benefits from '@/components/benefits';
+import ClientRender from '@/components/clientrender';
 import Contact from '@/components/contact';
 import Faq from '@/components/faq';
 import Footer from '@/components/footer';
