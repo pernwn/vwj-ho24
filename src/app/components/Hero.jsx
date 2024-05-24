@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { FilledBtn, IconBtn, OutlinedBtn } from "../ui/buttons";
+
 import styles from "../style";
 
 import Header from "./header";
@@ -19,7 +19,7 @@ export const Hero = () => {
       <div className="bg-cmdark/60 bg-clip-padding backdrop-filter backdrop-blur-xl">
         <div className={`${styles.padding} h-full w-full `}>
           <Header />
-          <div className={`w-3/4 xl:w-2/3 space-y-4 ${styles.padding} xl:px-64`}>
+          <div className={`w-3/5 space-y-4 xl:w-2/3 ${styles.padding} xl:px-64`}>
             <h1 className={`text-h1 text-cmwhite`}>
               Cybersikkerhed til <i>dine</i> behov
             </h1>
