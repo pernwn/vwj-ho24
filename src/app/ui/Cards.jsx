@@ -22,12 +22,12 @@ export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
   return (
     <motion.div
       whileHover={{
-        scale: 1.01,
+        scale: 1.02,
         y: -10,
         zIndex: 1,
         transition: { duration: 0.4 },
       }}
-      className="p-8 mx-1 max-w-sm min-h-[28rem] space-x-4 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-15 border-4 border-cmsecondary"
+      className="p-8 max-w-[22rem] min-h-[28rem] rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-15 border-4 border-cmsecondary"
     >
       <CardBody>
         <div className="flex flex-row pb-8 w-full h-full space-x-4">
