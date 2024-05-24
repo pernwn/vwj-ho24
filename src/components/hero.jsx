@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
 
-import styles from "../app/style";
+import styles from "@/app/style";
 
 
 import { Button } from "@material-tailwind/react";
-import CyberPartners from "../app/ui/basicSlider";
-import Header from './header';
+import CyberPartners from "@/app/ui/basicSlider";
+import Header from "./header";
 
 const Hero = () => {
   const [isHovering, setIsHovering] = useState(false);

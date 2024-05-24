@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
-import styles from "../app/style";
 import { motion } from "framer-motion";
-import Image from "next/legacy/image";
-import { ImgCard } from "../app/ui/cards";
+import styles from "@/app/style";
 
 import {
   CardBody,
   Card,
 } from "@material-tailwind/react";
+import { ImgCard } from "@/app/ui/cards";
 
 const ExplainerCard = () => {
   return (

@@ -1,13 +1,13 @@
 'use client'
 
+import { FilledBtn } from "@/app/ui/buttons";
+import { SimpleCard } from "@/app/ui/cards";
+import { ReviewComp } from "@/app/ui/reviews";
 import React from "react";
-import styles from "../app/style";
-import { SimpleCard } from "../app/ui/cards";
-import { FilledBtn } from "../app/ui/buttons";
-import { ReviewComp, reviews } from "../app/ui/reviews";
+import styles from "@/app/style";
 
 
-//import SocialProof from "../ui/SocialProof";
+
 
 const Para = ({ header, body }) => {
   return (

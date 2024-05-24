@@ -1,6 +1,6 @@
 import React from "react";
-import FormComp from "../app/ui/form";
-import styles from "../app/style";
+import styles from "@/app/style";
+import FormComp from "@/app/ui/form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
