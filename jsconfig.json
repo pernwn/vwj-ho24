@@ -11,11 +11,11 @@
   },
   "include": [
     "next-env.d.js",
-    "**/*.jsx",
+    "**/*.js",
     "**/*.jsx",
     ".next/types/**/*.js",
     "scripts/seed.js"
-, "app/layout.jsx", "app/page.jsx"  ],
+, "app/layout.js", "app/page.js"  ],
   "exclude": ["node_modules"]
   }
 
