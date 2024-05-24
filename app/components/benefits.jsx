@@ -1,10 +1,10 @@
 'use client'
 
-import { FilledBtn } from "@/app/ui/buttons";
-import { SimpleCard } from "@/app/ui/cards";
-import { ReviewComp } from "@/app/ui/reviews";
+import { SimpleCard } from "../ui/cards";
 import React from "react";
-import styles from "@/app/style";
+import styles from "../style";
+import { FilledBtn } from '../../src/app/ui/buttons';
+import { ReviewComp } from "../ui/reviews";
 
 
 

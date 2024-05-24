@@ -1,15 +1,19 @@
 "use client";
 
 import React from "react";
-import USP from "@/app/ui/usp";
-import styles from "@/app/style";
+
+import styles from "../style";
 import { motion } from "framer-motion";
-import { FilledBtn } from "@/app/ui/buttons";
+
 import { Card, CardHeader, CardBody } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { Button } from "@material-tailwind/react";
+import USP from "../ui/usp";
+import { FilledBtn } from "../ui/buttons";
+
+
 
 
 const circles = {

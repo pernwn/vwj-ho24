@@ -1,6 +1,6 @@
 'use client'
 
-import Loading from "@/app/(overview)/loading";
+import Loading from "../(overview)/loading";
 import React, { useState, useEffect } from "react";
 
 

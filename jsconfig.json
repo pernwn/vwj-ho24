@@ -1,8 +1,21 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./*"]
     }
+  },
+  "include": [
+    "next-env.d.js",
+    "**/*.jsx",
+    "**/*.jsx",
+    ".next/types/**/*.js",
+    "scripts/seed.js"
+, "app/layout.jsx", "app/page.jsx"  ],
+  "exclude": ["node_modules"]
   }
-}
+

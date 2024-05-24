@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "@/app/style";
+import styles from "../style";
 
 import {
   CardBody,
   Card,
 } from "@material-tailwind/react";
-import { ImgCard } from "@/app/ui/cards";
+import { ImgCard } from "../ui/cards";
 
 const ExplainerCard = () => {
   return (

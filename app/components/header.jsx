@@ -7,7 +7,7 @@ import CyberMindsWhiteLogo from "@/app/assets/icons/logo-white.svg";
 import { Button } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
-import styles from "@/app/style";
+import styles from "../style";
 
 const Header = () => {
 
