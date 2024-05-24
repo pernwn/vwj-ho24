@@ -20,7 +20,7 @@ import { Button } from "@material-tailwind/react";
   };
 const CircleCard = () => {
   return (
-    <section className="pb-28 xl:pb-12">
+    (<section className="pb-28 xl:pb-12">
       <USP />
       <Card
         className={`${styles.padding} bottom-4 xl:-bottom-4 relative flex items-center justify-center min-h-screen bg-transparent shadow-none`}
@@ -47,7 +47,7 @@ const CircleCard = () => {
         animate="animate"
         className="flex justify-center"
       >
-        <Card className="relative shadow-lg w-1/2 h-full xl:h-[30em] xl:w-1/4 xl:bottom-8 bottom-0 grid grid-cols-2 gap-4 p-4 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5">
+        <Card className={` ${styles.paddingX} py-8 pb-12 relative shadow-lg w-2/3 h-full xl:h-[30em] xl:w-1/4 xl:bottom-8 bottom-0 grid grid-cols-2 gap-8 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5`}>
           <CardHeader floated={false}>
             <Image
               src="/bjarke-profil.jpg"
@@ -81,7 +81,7 @@ const CircleCard = () => {
           </CardBody>
         </Card>
       </motion.div>
-    </section>
+    </section>)
   );
 };
 
