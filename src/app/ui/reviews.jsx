@@ -6,7 +6,7 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import avatar1 from "../assets/backgrounds/avatar1.png";
+import avatar1 from '@/app/assets/backgrounds/avatar1.png'
 import avatar2 from "../assets/backgrounds/avatar2.png";
 import avatar3 from "../assets/backgrounds/avatar3.png";
 import avatar4 from "../assets/backgrounds/avatar4.png";
@@ -16,9 +16,10 @@ import avatar7 from "../assets/backgrounds/avatar7.png";
 import avatar8 from "../assets/backgrounds/avatar8.png";
 import avatar9 from "../assets/backgrounds/avatar9.png";
 import avatar10 from "../assets/backgrounds/avatar10.png";
-import { ReviewCard } from "./cards";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { ReviewCard } from './cards';
 
 const reviews = [
   {

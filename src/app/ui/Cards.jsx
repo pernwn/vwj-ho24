@@ -1,10 +1,10 @@
 "use client";
-import * as React from "react";
+import React from "react";
 
 import { Divider } from "@mui/material";
 import styles from "../style";
 import { Rating } from "./reviews";
-import Image from "next/legacy/image";
+
 
 import { motion } from "framer-motion";
 
@@ -16,6 +16,7 @@ import {
   CardBody,
   Card,
 } from "@material-tailwind/react";
+import Image from "next/image";
 
 export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
   return (
@@ -26,15 +27,18 @@ export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
         zIndex: 1,
         transition: { duration: 0.4 },
       }}
-      className="p-8 max-w-sm mx-1 min-h-[25rem] space-x-4 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-15 border-4 border-cmsecondary"
+      className="p-4 max-w-sm min-h-[28rem] space-x-2 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-15 border-4 border-cmsecondary"
     >
       <CardBody>
-        <div className="flex flex-row pb-4 w-full h-full space-x-4">
-          <div className="px-4 rounded-full">
-            <img
+        <div className="flex flex-row pb-8 w-full h-full space-x-4">
+          <div className="px-2 rounded-full">
+            <Image 
               src={avatarImg}
               alt="Customer Img"
-              className="rounded-full w-full h-full"
+              className="rounded-full"
+              width={175}
+              height={175}
+
             />
           </div>
           <div className="w-full space-y-2">
@@ -44,7 +48,7 @@ export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
           </div>
         </div>
         <Divider className="bg-cmsecondary" />
-        <div className="p-4 overflow-y-auto">
+        <div className="p-2 overflow-y-auto">
           <p className="text-p text-pretty text-cmwhite font-300">{review}</p>
         </div>
       </CardBody>
@@ -80,11 +84,11 @@ export const SimpleCard = ({ content, action }) => {
 export const ImgCard = ({ title, content, holderImg }) => {
   return (
     <Card
-      className={`${styles.flexCenter} m-4 flex-col rounded-lg xl:w-1/3 w-full h-full space-y-4 p-4 bg-cmwhite/80`}
+      className={`${styles.flexCenter} m-2 flex-col rounded-xl xl:w-1/3 w-full min-h-[50%] p-2 space-y-4 bg-cmwhite/80`}
     >
-      <CardHeader className="h-1/2 w-full"><img src={holderImg} alt="Placeholder image"/></CardHeader>
+      <CardHeader className="h-full w-full"><img src={holderImg} alt="Placeholder image"/></CardHeader>
        
-      <CardBody className="flex flex-col justify-center items-center w-full h-1/2 space-y-2 py-4">
+      <CardBody className="flex flex-col justify-center items-center w-full h-full space-y-2 py-4 px-2">
         <h3 className="text-h5">{title}</h3>
         <p className="text-p">{content}</p>
       </CardBody>
