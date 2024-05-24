@@ -1,7 +1,6 @@
 
 
 import "./globals.css";
-import { Metadata } from "next";
 import { Josefin_Sans, Lato } from 'next/font/google';
 
 const josefin_Sans = Josefin_Sans({
@@ -16,7 +15,7 @@ const lato = Lato({
   variable:"--font-lato"
 });
 
-export const metadata = (Metadata) = {
+export const metadata =  {
   title: {
     template: "%s | CyberMinds",
     default: "CyberMinds",
