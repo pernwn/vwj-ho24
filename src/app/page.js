@@ -1,13 +1,15 @@
 
+
 import ClientRender from "./components/clientrender";
-import Footer from "./components/footer";
-import Hero from "./components/hero";
-import React from "react";
-import Intro from "./components/intro";
-import Faq from "./components/faq";
+import CircleCard from "./components/intro";
+import ExplainerCard from "./components/info";
 import Contact from "./components/contact";
-import Benefits from "./components/benefits";
-import Explainer from "./components/info";
+import Faq from "./components/faq";
+import Footer from "./components/footer";
+import Hero from './components/hero';
+import Benefits from './components/benefits';
+
+
 
 
 export default function Page() {
@@ -15,9 +17,9 @@ export default function Page() {
     <ClientRender>
       <main className="flex-grow">
         <Hero />
-        <Intro />
+        <CircleCard />
         <Benefits />
-        <Explainer />
+        <ExplainerCard />
         <Contact />
         <Faq />
         <Footer />

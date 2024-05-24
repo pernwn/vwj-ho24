@@ -3,11 +3,12 @@ import React, { useState } from "react";
 
 import styles from "../style";
 
-import Header from "./header";
+
 import { Button } from "@material-tailwind/react";
 import CyberPartners from "../ui/basicSlider";
+import Header from './header';
 
-export const Hero = () => {
+const Hero = () => {
   const [isHovering, setIsHovering] = useState(false);
   const hovering = () => setIsHovering(true);
   const notHovering = () => setIsHovering(false);
