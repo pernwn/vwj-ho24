@@ -41,7 +41,7 @@ h6 {
   font-family: var(--font-josefin);
   color: var(--text-700);
   line-height: 1;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p {
@@ -53,7 +53,7 @@ p {
 button p {
   font-family: var(--font-lato);
   color: var(--primary-600);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing:0.8% ;
   font-size:14pt;
 }
