@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="background--custom">
       <body
-        className={`${josefin_Sans.variable} ${lato.variable} antialiased mx-auto max-w-stretch overflow-x-hidden`}
+        className={`${josefin_Sans.variable} ${lato.variable} mx-auto max-w-stretch overflow-x-hidden`}
       >
         <main className="flex-grow h-screen">{children}</main>
       </body>

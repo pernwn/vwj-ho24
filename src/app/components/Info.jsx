@@ -61,12 +61,10 @@ const BackgroundCircles = () => {
         animate="animate"
 
       >
-        <Image
+        <img
           src="/developer.png"
           alt="Developer"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-full"
+          className="rounded-full object-cover w-full h-full"
         />
       </motion.div>
       <motion.div

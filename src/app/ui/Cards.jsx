@@ -31,12 +31,10 @@ export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
       <CardBody>
         <div className="flex flex-row pb-4 w-full h-full space-x-4">
           <div className="px-4 rounded-full">
-            <Image
+            <img
               src={avatarImg}
               alt="Customer Img"
-              width={150}
-              height={150}
-              className="rounded-full"
+              className="rounded-full w-full h-full"
             />
           </div>
           <div className="w-full space-y-2">

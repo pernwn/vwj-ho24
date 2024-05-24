@@ -13,6 +13,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { Button } from "@material-tailwind/react";
 
+
 const circles = {
   initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0, transition: { duration: 2, yoyo: Infinity } },
@@ -47,15 +48,13 @@ const CircleCard = () => {
         className="flex justify-center"
       >
         <Card
-          className={` ${styles.paddingX} py-8 pb-12 relative shadow-lg w-2/3 h-full xl:h-[30em] xl:w-1/4 xl:bottom-8 bottom-0 grid grid-cols-2 gap-8 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5`}
+          className={` ${styles.paddingX} py-4 pb-8 relative shadow-lg w-2/3 h-full xl:h-[30em] xl:w-1/4 xl:bottom-8 bottom-0 grid grid-cols-2 gap-8 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5`}
         >
           <CardHeader floated={false}>
-            <Image
+            <img
               src="/bjarke-profil.jpg"
               alt="Bjarke Petersen"
-              className="rounded-lg shadow-md"
-              layout="fill"
-              objectFit="cover"
+              className="rounded-lg shadow-md w-full h-full object-cover"
             />
           </CardHeader>
           <CardBody className="flex flex-col gap-2 py-8">
@@ -98,12 +97,10 @@ const BackgroundCircles = () => {
         initial="initial"
         animate="animate"
       >
-        <Image
+        <img
           src="/roundbuilding.jpg"
           alt="Decorative Circle 3"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-full"
+          className="rounded-full object-cover w-full h-full"
         />
       </motion.div>
       <motion.div
