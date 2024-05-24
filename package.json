@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "npm install --legacy-peer-deps && npx vercel build"
+    "v-build": "npm install --legacy-peer-deps && npx vercel build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
