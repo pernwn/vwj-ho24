@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-build": "npm install --legacy-peer-deps && vercel build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -32,7 +33,7 @@
     "@svgr/cli": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^9.3.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.3",
     "eslint-plugin-react": "^7.34.1",
     "globals": "^15.3.0",
