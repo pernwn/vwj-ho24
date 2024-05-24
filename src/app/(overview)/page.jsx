@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { HeroSkeleton, IntroSkeleton } from '../ui/skeleton';
 import styles from '../style';
 import Hero from '../components/hero';
-import Intro from "./components/intro";
+import CircleCard from '../components/intro';
 
 
 
@@ -21,7 +21,7 @@ export default async function Page() {
         </Suspense>
 
         <Suspense fallback={<IntroSkeleton/>}>
-          <Intro />
+          <CircleCard/>
         </Suspense>
       </div>
 

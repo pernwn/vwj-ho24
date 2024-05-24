@@ -10,8 +10,6 @@ import Hero from './components/hero';
 import Benefits from './components/benefits';
 
 
-
-
 export default function Page() {
   return (
     <ClientRender>
