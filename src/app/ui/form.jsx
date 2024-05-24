@@ -255,13 +255,13 @@ export default function FormComp() {
           <Button
             type="submit"
             variant="filled"
-            className={`enabled:bg-cmaccent enabled:text-cmprimary uppercase w-full p-3 text-md font-medium transition-colors ease-in enabled:hover:bg-[#ff3300] enabled:hover:cursor-pointer ${
+            className={`enabled:bg-cmaccent/65 enabled:text-cmwhite enabled:ring-cmaccent ring-2 uppercase w-full p-3 text-md font-medium transition-all ease-linear duration-200 enabled:hover:ring-[#ffad99] shadow-md enabled:hover:shadow-lg enabled:hover:bg-cmaccent enabled:hover:text-cmwhite enabled:hover:cursor-pointer translate-y-2 enabled:hover:translate-y-1 ${
               isButtonDisabled ? "bg-cmdark/40 text-cmwhite/40" : ""
             }`}
             // code for handling disabled button mode
             // ---disabled={isButtonDisabled}
           >
-            <p>start dialogen</p>
+            <p className="text-p text-cmwhite">start dialogen</p>
           </Button>
         </div>
       </form>
@@ -284,8 +284,8 @@ export default function FormComp() {
               som muligt.
             </p>
             <p className="text-p">
-              Hvis du har yderligere spørgsmål eller bekymringer,
-              tøv ikke med at kontakte os igen. Vi er her for at hjælpe dig.
+              Hvis du har yderligere spørgsmål eller bekymringer, tøv ikke med
+              at kontakte os igen. Vi er her for at hjælpe dig.
             </p>
           </div>
 

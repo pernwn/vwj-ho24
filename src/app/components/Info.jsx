@@ -12,14 +12,14 @@ import {
 
 const ExplainerCard = () => {
   return (
-    <section className={`${styles.flexCenter} relative my-12`}>
+    <section className={`${styles.flexCenter} relative my-24`}>
       <BackgroundCircles />
       <Card
       sx={{}}
-        className={`${styles.flexCenter} ${styles.paddingY} overflow-hidden w-4/5 xl:w-2/5 relative rounded-2xl shadow-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-75 border border-cmdark/5 bg-cmwhite`}
+        className={`${styles.flexCenter} ${styles.paddingY} overflow-hidden w-3/5 xl:w-2/5 relative rounded-2xl shadow-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-75 border border-cmdark/5 bg-cmwhite`}
       >
         <CardBody className="flex flex-row items-center justify-center w-fit h-fit">
-          <div className="text-center w-full flex flex-col items-center justify-center px-28 xl:px-8">
+          <div className="text-center w-full flex flex-col items-center justify-center px-12 xl:px-8">
             <h2 className="text-h2">Din sikkerhed, vores ansvar</h2>
             <p className="text-p mx-12 xl:mx-80">
               Få et indblik i, hvordan vi prioriterer <b>kvalitet</b>,{" "}
@@ -55,7 +55,7 @@ const BackgroundCircles = () => {
   return (
     <div className="absolute inset-0">
       <motion.div
-        className="w-[48em] h-[48em] border-[1.8rem] border-cmaccent rounded-full absolute top-[4%] left-[-18%] xl:left-[12%]"
+        className="w-[48em] h-[48em] border-[1.8rem] border-cmaccent rounded-full absolute top-[12%] left-[-18%] xl:left-[12%]"
         variants={circles}
         initial="initial"
         animate="animate"
@@ -70,13 +70,13 @@ const BackgroundCircles = () => {
         />
       </motion.div>
       <motion.div
-        className="w-[12em] h-[12em] bg-cmaccent rounded-full absolute top-[12%] right-[4%] xl:right-[20%]"
+        className="w-[12em] h-[12em] bg-cmaccent rounded-full absolute top-[12%] right-[5%] xl:right-[20%]"
         variants={circles}
         initial="initial"
         animate="animate"
       />
       <motion.div
-        className="w-[24em] h-[24em] bg-cmprimary rounded-full absolute flex items-center justify-center top-[14%] right-[4%] xl:right-[22%]"
+        className="w-[24em] h-[24em] bg-cmprimary rounded-full absolute flex items-center justify-center top-[14%] right-[8%] xl:right-[22%]"
         variants={circles}
         initial="initial"
         animate="animate"

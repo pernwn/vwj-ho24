@@ -13,14 +13,13 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { Button } from "@material-tailwind/react";
 
-
-  const circles = {
-    initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0, transition: { duration: 2, yoyo: Infinity } },
-  };
+const circles = {
+  initial: { opacity: 0, y: 50 },
+  animate: { opacity: 1, y: 0, transition: { duration: 2, yoyo: Infinity } },
+};
 const CircleCard = () => {
   return (
-    (<section className="pb-28 xl:pb-12">
+    <section className="pb-28 xl:pb-12">
       <USP />
       <Card
         className={`${styles.padding} bottom-4 xl:-bottom-4 relative flex items-center justify-center min-h-screen bg-transparent shadow-none`}
@@ -47,7 +46,9 @@ const CircleCard = () => {
         animate="animate"
         className="flex justify-center"
       >
-        <Card className={` ${styles.paddingX} py-8 pb-12 relative shadow-lg w-2/3 h-full xl:h-[30em] xl:w-1/4 xl:bottom-8 bottom-0 grid grid-cols-2 gap-8 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5`}>
+        <Card
+          className={` ${styles.paddingX} py-8 pb-12 relative shadow-lg w-2/3 h-full xl:h-[30em] xl:w-1/4 xl:bottom-8 bottom-0 grid grid-cols-2 gap-8 bg-clip-padding backdrop-filter backdrop-blur-lg bg-cmwhite/75 bg-opacity-75 border border-cmdark/5`}
+        >
           <CardHeader floated={false}>
             <Image
               src="/bjarke-profil.jpg"
@@ -70,18 +71,21 @@ const CircleCard = () => {
               bedre end de fleste, hjælpe med at italesætte forretningsbehovet
               og omsætte det til løsninger.
             </p>
-<Link href="https://www.linkedin.com/in/bjarke-n-petersen/">
-<Button size="sm" className="rounded-full w-full flex justify-center gap-2 mt-4 bg-clip-padding backdrop-filter backdrop-blur-sm text-cmwhite items-center bg-cmaccent border-cmaccent border-2 hover:bg-cmprimary/80 hover:border-cmprimary hover:cursor-pointer transition-color ease-linear  ">
-<FontAwesomeIcon icon={faLinkedin} size="2xl"/>
-<p className="text-md text-current normal-case">Skab forbindelse</p>
-</Button>  
-</Link>
-
-
+            <Link href="https://www.linkedin.com/in/bjarke-n-petersen/">
+              <Button
+                size="sm"
+                className="rounded-full w-full flex justify-center gap-2 mt-4 bg-clip-padding  text-cmwhite items-center bg-cmaccent/75 ring-cmaccent/75 ring-2 hover:bg-cmaccent hover:ring-[#ffad99] hover:cursor-pointer transition-color ease-linear  "
+              >
+                <FontAwesomeIcon icon={faLinkedin} size="2xl" />
+                <p className="text-md text-current normal-case">
+                  Skab forbindelse
+                </p>
+              </Button>
+            </Link>
           </CardBody>
         </Card>
       </motion.div>
-    </section>)
+    </section>
   );
 };
 
@@ -119,4 +123,3 @@ const BackgroundCircles = () => {
 };
 
 export default CircleCard;
-

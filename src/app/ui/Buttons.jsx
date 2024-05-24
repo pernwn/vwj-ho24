@@ -12,12 +12,10 @@ export const FilledBtn = (props) => {
   return (
     <a href={url}>
       <Button
-        className={`flex items-center gap-2 translate-y-4   hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-cmprimary/80 hover:border-cmprimary hover:translate-y-3 rounded-full border-2 border-cmaccent hover:cursor-pointer py-4 px-8 bg-cmaccent active:translate-y-2 duration-300 ease-linear transition  `}
+        className={`flex items-center gap-2 translate-y-4  hover:shadow-lg hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-cmaccent hover:translate-y-3 rounded-full ring-2 ring-cmaccent/60 hover:ring-[#ffad99] hover:cursor-pointer py-4 px-8 bg-cmaccent/60 active:translate-y-2 duration-300 ease-linear transition  `}
       >
-      {icon}
-        <p className="text-cmwhite normal-case">
-            {title}
-        </p>
+        {icon}
+        <p className="text-cmwhite normal-case">{title}</p>
       </Button>
     </a>
   );

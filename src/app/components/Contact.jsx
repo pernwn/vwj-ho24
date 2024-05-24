@@ -11,7 +11,7 @@ const Contact = () => {
     <section
       className={`${styles.padding} xl:px-44 flex-row gap-16 bg-gradient-tr ${styles.flexStart} rounded-bl-[12em] rounded-tr-[12em]`}
     >
-      <div className={`flex-col w-1/2 space-y-6 pl-8 py-12 xl:w-1/4`}>
+      <div className={`flex-col w-1/2 space-y-6 px-8 py-12 xl:w-1/4`}>
         <h2 className="text-h2 text-cmwhite">
           Klar til at styrke din virksomheds IT-sikkerhed?
         </h2>
@@ -27,16 +27,18 @@ const Contact = () => {
         </p>
         <div>
           <h5 className="text-h5 text-cmaccent">
-            Fang os nemt på{" "}
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              size="xl"
-              className="hover:text-cmsecondary hover:cursor-pointer ml-2 "
-            />
+            Fang os nemt på
+            {
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                size="xl"
+                className="hover:text-cmsecondary hover:cursor-pointer ml-2 "
+              />
+            }
           </h5>
         </div>
       </div>
-      <div className="pl-8 py-12">
+      <div className="pt-12">
         <FormComp />
       </div>
     </section>
