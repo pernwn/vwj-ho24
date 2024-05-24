@@ -27,7 +27,7 @@ export const ReviewCard = ({ name, occupation, review, stars, avatarImg }) => {
         zIndex: 1,
         transition: { duration: 0.4 },
       }}
-      className="p-4 max-w-sm min-h-[28rem] space-x-2 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-15 border-4 border-cmsecondary"
+      className="p-8 mx-1 max-w-sm min-h-[28rem] space-x-4 rounded-lg shadow-xl bg-cmsecondary bg-blend-soft-light bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-15 border-4 border-cmsecondary"
     >
       <CardBody>
         <div className="flex flex-row pb-8 w-full h-full space-x-4">
