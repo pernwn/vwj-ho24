@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import USP from "../ui/usp";
-import styles from "../style";
+import USP from "../app/ui/usp";
+import styles from "../app/style";
 
 import { motion } from "framer-motion";
-import { FilledBtn } from "../ui/buttons";
+import { FilledBtn } from "../app/ui/buttons";
 import { Card, CardHeader, CardBody } from "@material-tailwind/react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

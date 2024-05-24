@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
 import { HeroSkeleton, IntroSkeleton } from '../ui/skeleton';
 import styles from '../style';
-import Hero from '../components/hero';
-import CircleCard from '../components/intro';
+
+import { Hero } from '@/components/hero';
+import { CircleCard } from '@/components/intro';
 
 
 

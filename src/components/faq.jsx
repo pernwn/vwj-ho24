@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 
-import styles from "../style";
-import Accordion from "../ui/accordion";
+import styles from "../app/style";
+import Accordion from "../app/ui/accordion";
 
 const Faq = () => {
     const [openIndex, setOpenIndex] = useState(null);

@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import styles from "../style";
+import styles from "../app/style";
 import { motion } from "framer-motion";
 import Image from "next/legacy/image";
-import { ImgCard } from "../ui/cards";
+import { ImgCard } from "../app/ui/cards";
 
 import {
   CardBody,

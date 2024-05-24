@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from "react";
-import Loading from "../(overview)/loading";
+import Loading from "../app/(overview)/loading";
 
 const useIsClient = () => {
   const [isClient, setIsClient] = useState(false);

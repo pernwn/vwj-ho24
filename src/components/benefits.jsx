@@ -1,10 +1,10 @@
 'use client'
 
 import React from "react";
-import styles from "../style";
-import { SimpleCard } from "../ui/cards";
-import { FilledBtn } from "../ui/buttons";
-import { ReviewComp, reviews } from "../ui/reviews";
+import styles from "../app/style";
+import { SimpleCard } from "../app/ui/cards";
+import { FilledBtn } from "../app/ui/buttons";
+import { ReviewComp, reviews } from "../app/ui/reviews";
 
 
 //import SocialProof from "../ui/SocialProof";

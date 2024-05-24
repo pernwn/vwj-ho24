@@ -1,13 +1,14 @@
 
 
-import ClientRender from "./components/clientrender";
-import CircleCard from "./components/intro";
-import ExplainerCard from "./components/info";
-import Contact from "./components/contact";
-import Faq from "./components/faq";
-import Footer from "./components/footer";
-import Hero from './components/hero';
-import Benefits from './components/benefits';
+
+
+import Benefits from '@/components/benefits';
+import Contact from '@/components/contact';
+import Faq from '@/components/faq';
+import Footer from '@/components/footer';
+import { Hero } from '@/components/hero';
+import ExplainerCard from '@/components/info';
+import CircleCard from '@/components/intro';
 
 
 export default function Page() {
