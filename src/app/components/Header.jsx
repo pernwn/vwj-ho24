@@ -12,28 +12,24 @@ import styles from "../style"
 const Header = () => {
 //TODO: lav hover states
 
-  // const [isHovering, setIsHovering] = useState(false);
-  // const hovering = () => setIsHovering(true);
-  // const notHovering = () => setIsHovering(false);
+  const [isHovering, setIsHovering] = useState(false);
+  const handleHover = () => setIsHovering(true);
+  const handleNotHover = () => setIsHovering(false);
 
   return (
-    <div className={`flex flex-row justify-between ${styles.paddingX} xl:px-64`}>
+    <div
+      className={`flex flex-row justify-between ${styles.paddingX} xl:px-64`}
+    >
       <CyberMindsWhiteLogo
         className="w-75 h-75"
         alt="CyberMinds Logo Color White"
       />
 
-      <Button className="translate-y-0 hover:-translate-y-1 active:-translate-y-2 hover:cursor-pointer my-1.5 shadow-md  bg-cmaccent rounded-full border-solid border-cmaccent border-2 hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-cmprimary hover:bg-opacity-40 hover:border-cmprimary hover:text-cmwhite transition-all ease-in-out duration-300">
-        <p className="mix-blend-hard-light text-lg text-cmwhite">
-          <FontAwesomeIcon icon={faPhone} size="2xl" className="pr-2" />
-          {"+45 1234 5678"}
-        </p>
-      </Button>
 
-      {/* <Button
-        onMouseEnter={hovering}
-        onMouseLeave={notHovering}
-        className=" translate-y-0 hover:-translate-y-1 active:-translate-y-2 cursor-pointer my-1 shadow-md  bg-cmaccent rounded-full border-solid border-cmaccent border-2 bg-clip-padding backdrop-filter backdrop-blur-sm hover:bg-cmprimary hover:bg-opacity-40 hover:border-cmprimary hover:text-cmwhite transition-all ease-in-out duration-300"
+      <Button
+        onMouseEnter={handleHover}
+        onMouseLeave={handleNotHover}
+        className="translate-y-0 hover:-translate-y-1 active:-translate-y-2 hover:cursor-pointer my-1.5 shadow-md  bg-cmaccent rounded-full border-solid border-cmaccent border-2 hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-cmprimary hover:bg-opacity-40 hover:border-cmprimary hover:text-cmwhite transition-all ease-in-out duration-300"
       >
         
         {isHovering ? (
@@ -55,7 +51,7 @@ const Header = () => {
             {"+45 1234 5678"}
           </p>
         )}
-      </Button> */}
+      </Button>
     </div>
   );
 };

@@ -13,7 +13,7 @@ export function HeroSkeleton() {
       <div>
         <HeaderSkeleton />
         <div className="bg-gray-300">
-          <div className="w-full h-full py-16">
+          <div className={`w-3/4 xl:w-2/3 space-y-4 ${styles.padding} xl:px-64 h-full py-16`}>
             <div className="w-2/3 h-20 mb-4 rounded-md bg-gray-100" />
             <div className="w-2/4 h-12 mb-4 rounded-lg bg-gray-100" />
             <div className="rounded-full w-36 h-12 bg-gray-100" />
@@ -27,7 +27,7 @@ export function HeroSkeleton() {
 export function HeaderSkeleton() {
   return (
     <div
-      className={`mb-4 h-full w-full flex flex-row justify-between items-center bg-gray-300`}
+      className={`${styles.paddingX} mb-4 h-full w-full flex flex-row justify-between items-center bg-gray-300`}
     >
       <div className={`rounded-full w-24 h-24 bg-gray-100`} />
       <div className={`rounded-full w-56 h-20 bg-gray-100`} />
